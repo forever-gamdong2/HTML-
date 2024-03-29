@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style="color: pink;">테이블 태그</h3>
+    <article>
+        <table border="1"> <!--table : 표 생성 태그-->
+            <tr bgcolor="lightpink"> <!--table row : 표에 행 삽입 'th or td를 추가하면 가로로 뻗어나감'-->
+                <th>1순위</th> <!--table head : 표에 제목 셀 삽입 "컨텐츠(제목)가 굵은글씨로 셀 가운데 정렬됨"-->
+                <th>2순위</th>
+                <th>3순위</th>
+                <th>4순위</th>
+            </tr>
+            <tr>
+                <td>튀르키예</td> <!--table data : 표에 일반 셀 삽입-->
+                <td>북한</td>
+                <td>스위스</td>
+                <td>우간다</td>
+            </tr>
+            <tr>
+                <td>인도</td>
+                <td>캐나다</td>
+                <td>폴란드</td>
+                <td>아일랜드</td>
+            </tr>
+            <tr>
+                <td>케냐</td>
+                <td>쿠바</td>
+                <td>프랑스</td>
+                <td>이탈리아</td>
+            </tr>
+            <caption>여기가 테이블 캡션 위치</caption> <!--원래는 아래에 등장하여 덩어리의 도움말을 삽입하는 태그지만, 테이블에 사용시 위에 등장(제목처럼 사용됨) -->
+        </table>
+    </article><br>
+    <hr>
+    <h3 style="color: green;">시간표 짜기</h3>  
+    <article>
+        <table border="2">
+            <tr bgcolor="lightgreen">
+                <th></th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+            <tr>
+                <td>1교시</td>
+                <td>영어</td>
+                <td>국어</td>
+                <td>과학</td>
+                <td>미술</td>
+                <td>기술</td>
+            </tr>
+            <tr>
+                <td>2교시</td>
+                <td>도덕</td>
+                <td>체육</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td>사회</td>
+            </tr>
+            <caption>여기가 테이블 캡션 위치</caption>
+        </table>
+    </article><br>
+    <hr>
+    <article>
+        <table border="1">
+            <tr>
+                <th colspan="2">지역별 홍차</th> <!-- colspan : 가로 셀 합치기 // 원래는 1열 짜리였던걸, 2열의 자리차지하게 함. th/td 둘다가능 --> <!--col; column-->
+            </tr>
+            <tr>
+                <th rowspan="3">중국</th><td>정산소종</td> <!-- rowspan : 세로 셀 합치기 // 원래는 1행 짜리였던걸, 3행의 자리차지하게 함. th/td 둘다가능. 세로세로세로가 쌓여서 가로(행)가 되므로 행 합치기가 맞음 -->
+            </tr>
+            <tr>
+                <td>기문</td>
+            </tr>
+            <tr>
+                <td>운남</td>
+            </tr>
+            <tr>
+                <th rowspan="4">인도 및 스리랑카</th><td>아삼</td>
+            </tr>
+            <tr>
+                <td>실론</td>
+            </tr>
+            <tr>
+                <td>다질링</td>
+            </tr>
+            <tr>
+                <td>닐기리</td>
+            </tr>
+        </table>
+    </article>
+</body>
+</html>
