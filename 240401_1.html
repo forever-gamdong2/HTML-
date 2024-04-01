@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .waffletable{
+            width: 100px;
+            height: 100px;
+        }
+        .waffletable td{   /*waffletable에 속한 td에 적용*/
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table border="1">
+            <!--<thead>--> <!--th들을 소제목으로 간주하고, 이 th들을 하나의 그룹으로 묶어서 관리함 'thead'-->
+                <tr>
+                    <th>짱구는 못말려</th>   
+                    <th>꼬마펭귄 핑구</th>
+                    <th>더 심슨</th>
+                    <th>꼬마마법사 레미</th>
+                    <td rowspan="3">즐거운 만화^^</td>
+                </tr>
+            <!--</thead>-->
+            <!--<tbody>-->   <!--표 내용물들을 'tbody'라는 의미론적 태그로 묶음-->
+                <tr>
+                    <td>짱구</td>
+                    <td>핑구</td>
+                    <td>바트</td>
+                    <td>레미</td>
+                </tr>
+                <tr>
+                    <td>철수</td>
+                    <td>물개</td>
+                    <td>리사</td>
+                    <td>보라</td>
+                </tr>
+                <tr>
+                    <td colspan="5">즐거운 추억^^</td>
+                </tr>
+            <!--</tbody>-->  <!--'tfoot'도 있지만 여기서는 쓰지 않겠당 -->
+        </table>
+    </div>
+    <br><hr><br>
+
+    <div>
+        <table border="1">
+            <thead> <!--thead : 머릿글, 각 칸의 제목, 정보-->
+                <tr>
+                    <th colspan="10">번호</th>
+                </tr>
+            </thead>
+            <tfoot> <!--tfoot : 바닥글, 저자, 출처, 인용 정보-->
+                <tr>
+                    <td colspan="10">총 10</td>
+                </tr>
+            </tfoot>
+            <tbody> <!--tbody : 본문글-->
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>  <!--thead와 tfoot을 먼저 읽어들이고, 본문인 tbody 부분을 마지막에 읽어들이는 이유 : 표 출력시 페이지가 넘어가게 되면 thead 부분과 tfoot 부분이 반복 인쇄됨. 또한 thead와 tfoot은 하나의 table에 하나만 존재해야 하지만, tbody는 여러개 존재 가능-->
+            </tbody> <!--thead - tfoot - tbody 순으로 코딩다(But 화면 출력시 thead - tbody - tfoot 순으로 나타남)-->
+        </table> <!--thead, tfoot, tbody 같은 의미론적 태그들 '시맨틱 태그' ; 이런 태그들의 존재 이유 '접근성'; 장애인들이 스크린리더를 통해 모니터 화면을 읽기 편하도록-->
+    </div>
+    <br><hr><br>
+
+    <div> <!--테이블 작성 순서
+              1. table 태그 > caption 태그 > colgroup, col 태그 > tr, td 태그
+              2. tr, td 태그 작성시 의미론적 태그를 같이 쓸 것이라면, thead > tfoot > tbody 순으로 작성 -->
+        <table border="1">
+            <colgroup> <!--col태그가 닫는태그가 없으므로 col을 묶어주기 위한 태그--> <!--표에서 행 한줄을 선택하는건 쉬움. 그냥 tr 하나 선택하면됨. 하지만 열 한줄을 선택하긴 어려움. 각 tr의 n번째 td들을 선택해야함. 이럴 때 col 태그를 사용-->
+                <!-- <col> : 단일태그, column의 준말--> <!--열 그룹 태그--> <!--열 한줄만 스타일 지정하기 위한 태그-->
+                <col style="background-color: skyblue;" span="2"> <!--span="2" 태그 적용시 해당 col style이 옆 열(오른쪽)까지 총 2개의 열에 영향; 가장 마지막 col style이 사라짐. spantaneous-->
+                <col style="background-color: lightgreen;">
+                <col style="background-color: lightpink;">
+            </colgroup>
+                <tr class="waffletable">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="waffletable">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+        </table>
+    </div>
+    <br><hr><br>
+
+        <!--span : 아우르다, 포괄하다-->
+        <!--scope : 열(column)제목인지, 행(row)제목인지 구분지어줌. 웹 접근성, 시맨틱 태그, 제목을 보다 잘 선택하려고 쓰는 속성-->
+    <table border="1">
+        <tr>
+        <!--<th scope="colgroup" colspan="5">구분</th> --> <!--colspan으로 col을 2개 이상 합쳤다면 scope="colgroup"으로 명명 바꿔줘야함-->
+            <th scope="col">구분</th>  <!--scope; 그리스어 '보다' 라는 단어에서 유래-->
+            <th scope="col">중간고사</th>
+            <th scope="col">기말고사</th>
+        </tr>
+        <tr>
+            <th scope="row">전공</th>
+            <td>S+</td>
+            <td>S+</td>
+        </tr>
+        <tr>
+            <th scope="row">교양</th>
+            <td>S+</td>
+            <td>S+</td>
+        </tr>
+    </table>
+</body>
+</html>
