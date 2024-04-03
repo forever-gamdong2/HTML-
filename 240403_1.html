@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그의 모든 것</title>
+    <style>
+        small{
+            color: darkblue;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        form : 입력 폼 태그(압력 양식의 시작과 끝 표시 '바구니')
+        action 속성 : 데이터를 전달할 주소(data base 저장 경로) 또는 위치
+        method : 노출(get) or 비노출(post)
+    -->     
+    <form> <!--form 으로 안감싸도 input 태그 만으로 검색창이 나타남. 하지만 form이라는 입력폼 태그를 사용함으로써 양식을 구조화 함-->
+        <input type="text" name="search"> <!--네모 길쭉한 검색창 등장--><!--실제 데이터 값을 입력하는 공간--><!--name 써주는 이유 : 이게 무엇을 위한 form(search...)인지 써둠; js 작성시 편의성 증대-->
+        <input type="submit"> <!--네모난 제출 버튼 등장--><!--submit : 제출하다, 전송하다(send)-->
+        <input type="radio"> <!--동그란 선택 버튼 등장-->
+        <input type="password"> <!--네모난 비밀번호 입력 버튼 등장. 입력한 텍스트가 암호화되어(비노출 ****) 나옴-->
+        <input type="submit">
+        <br><hr><br>
+        <small>button(버튼) :</small>
+        <input type="button"><br>
+
+        <small>checkbox(체크박스) :</small>
+        <input type="checkbox"><br>
+
+        <small>color(색상 선택 박스) :</small>
+        <input type="color"><br>
+
+        <small>date(날짜; 연-원-일) :</small>
+        <input type="date"><br>
+
+        <small>datetime(날짜; 연-원-일) :</small>
+        <input type="datetime"><br>
+
+        <small>datetime(날짜; 사용자 시간대에 맞는. 연-원-일) :</small>
+        <input type="datetime-local"><br>
+
+        <small>email(이메일) :</small>
+        <input type="email"><br>
+
+        <small>file(파일 업로드) :</small>
+        <input type="file"><br>
+
+        <small>hidden(사용자가 못보는 입력요소) :</small>
+        <input type="hidden" name="admin" value="none"><br> <!--name : (admin 설정시 관리자 모드~), value : 초기값(none 설정시 '초기값 없음')-->
+
+        <small>image(이미지로 만든 버튼) :</small>
+        <input type="image" src="../images/말티푸.jpg" height="50px"><br>
+
+        <small>month(날짜; 년-월) :</small>
+        <input type="month"><br>
+
+        <small>number(숫자 입력 폼) :</small>
+        <input type="number"><br>
+
+        <small>radio(단일 선택 버튼) :</small>
+        <input type="radio"><br>
+        
+        <small>range(조절바) :</small>
+        <input type="range"><br>
+
+        <small>reset(초기화 버튼) :</small>
+        <input type="reset"><br>
+
+        <small>search(검색용 텍스트 박스) :</small>
+        <input type="search"><br>
+
+        <small>submit(전송, 제출 버튼) :</small>
+        <input type="submit"><br>
+
+        <small>text(글박스; 한 줄) :</small>
+        <input type="text"><br>
+
+        <small>tel(전화) :</small>
+        <input type="tel"><br>
+
+        <small>time(시간 표시) :</small>
+        <input type="time"><br>
+        
+        <small>url(웹 주소 입력 박스) :</small>
+        <input type="url"><br>
+
+        <small>week(날짜; 연-n주차) :</small>
+        <input type="week"><br>
+    </form>
+    <br><hr><br>
+
+    <details>
+        <summary>
+            <b><mark>form 태그의 속성</mark></b></summary>
+            <ul>
+                <li>action 속성 : 서버 URL 경로 표시  </li>
+                <li>method 속성 : GET-공개용이나, POST-비공개용 이냐로 나누어 전달</li>
+                <li>cf) GET 방식으로 서버에 전송된 것은 주소표시줄에 경로가 전부 노출됨</li>
+                <li>cf) POST 방식으로 서버에 전송된 것은 주소표시줄에 경로가 끊겨보임 or 노출안됨</li>
+            </ul>
+    </details>
+
+    <details>
+        <summary>
+            <b><mark>input 태그의 속성</mark></b></summary>
+            <ul>
+                <li>name 속성(필수는 x) : 해당 타입의 목적을 띈 이름을 작성 ex) radio 버튼이 'menu'의 목적이 있음을 밝힘</li>
+                <li>value 속성(필수는 x) : 초기값</li>
+                <li>id 속성 : label 태그와 같이 사용됨. JS의 연결점이 되기도 함</li>
+                <br><hr><br>
+
+                <!--방법1(label 태그와 input 태그 묶기)--> <!--명시적 방식-->
+                <small>radio(단일 선택 버튼) :</small>
+                <label for="choiceab">선택버튼</label>
+                <input type="radio" name="menu" value="choose" id="choiceab"><br>
+
+                <!--방법2(label 태그와 input 태그 묶기)--> <!--암묵적 방식-->
+                <label>
+                    선택버튼
+                    <input type="checkbox">
+                </label>
+            </ul>
+    </details>
+
+    <details>
+        <summary>
+            <b><mark>label(레이블, 라벨) 태그의 속성</mark></b></summary>
+            <ul>
+                <li>for 속성 : input 태그의 제목으로 사용하기 위해 넣어주는 속성. 웹 접근성 증대</li>
+            </ul>
+    </details>
+    <br><hr><br> 
+
+    <label for="ssul">이야기</label> <!--label for"" 자리엔 textarea의 id 가 들어간다-->
+    <textarea name="ssullll" id="ssul" cols="1" rows="10"></textarea> <!--textarea name""에 id랑 같은 ssul 써도 상관X--> <!--cols, rows 모두 1로 설정시 한글자 들어갈 정 도의 텍스트박스 생성--><!--cols=1, rows=10 설정시 세로로 열글자 들어갈 정도의 텍스트박스 생성-->
+    <br><br><hr><br> 
+
+    <select name="" id="" size="3" multiple> <!--size=3 : select 창을 누르지 않아도 아래 노출되는 항목의 갯수를 3개로 지정--> <!--multiple : 항목 중복선택 가능-->
+        <optgroup label="커피류"></optgroup><!--optgroup : option들에 대한 제목을 설정--><!--optgroup : option들에 대한 제목을 설정-->
+            <option value="" selected>아메리카노</option> <!--selected : 내가 선택하지 않아도 애초에 기본으로 이 항목이선택되어있음-->
+            <option value="">에스프레소</option>
+            <option value="">바닐라라떼</option>   
+            <option value="">민초라떼</option>
+        <optgroup label="논커피류"></optgroup><!--option들에 대한 제목을 설정-->
+            <option value="">대봉감주스</option>
+            <option value="">상하목장 아이스크림</option>
+            <option value="">우리포도주스</option>
+            <option value="">팝핑트로피칼스무디</option>
+    </select>
+    <br><br><hr><br> 
+
+    <!--<button type="button"></button>
+    <button type="menu"></button>
+    <button type="reset"></button>
+    <button type="submit"></button>-->
+
+    <button type="submit">
+        <img src="../images/햄스터.jpg" alt="전송버튼" width="50px" height="50px">
+        HTML 문서 업로드하기
+    </button>
+    <!--input type = button 과 button 태그의 차이
+    1) HTML5 버전에서 button 태그가 나왔으므로, button 태그를 사용하는 것이 웹표준에 권장됨.
+    2) button류의 input type만 따로 표현할 수 있다.
+    3) 꾸미기가 더 수월하다.
+    -->
+    <br><br><hr><br> 
+
+    <fieldset>
+        <legend>레전드 태그는 양식의 제목</legend>
+        필드셋 태그는 양식을 구분하는 폼
+    </fieldset>
+</body>                                                               
+</html>
