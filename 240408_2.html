@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*첫 번째 필드셋*/
+        *{   /*전체 선택자(body)*/
+            color: coral;
+        }
+        body,h1,p{   /*세개에 모두 적용*/
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+        p{
+            color: pink;
+            line-height: 20px; /*행간*/ /*전체선택자(*)보다>부분선택자(p)가 더 우선권; 더 세부영역 호출이 더 우선권*/
+        }
+        fieldset{
+            margin-bottom: 30px;
+        }
+
+        /*두 번째 필드셋*/
+        #header{
+            width: 800px;
+            background-color: lightyellow;
+            margin: 0 auto; (fieldset 내부에서의 상/하 마진 0, 좌후는 마진 auto)
+            /*margin:0 auto
+            -> 풀어쓰기 : margin-top: 0; , margin-bottom: 0; , margin-left: auto; , margin-right: auto;*/        
+        }
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden; /*내용이 넘쳤을 때 안보이게 함*/
+        }
+        #aside{
+            width: 200px;
+            background-color: skyblue;
+            float: left; /*float(=hover): 나 왼쪽으로 갈거야 '공중에 띄운듯하게 자기 영역을 차지'*/
+        }
+        #content{
+            width: 600px;
+            background-color: lightgreen;
+            float: right;
+        }
+        #content::after{
+            clear: both; /*clear: both; = clear: left; 와 clear: right; 를 합친 것*/
+        }
+
+        /*세번째 필드셋*/
+        .txt1{
+            color: blue;
+        }
+        .bg1{
+            background-color: lightslategray;
+        }
+        .txt2{
+            color: pink;
+        }
+        .bg2{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <h1>기본 선택자 연습</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nam nemo autem dolorem vero. Tempore optio quo fugiat dignissimos dolor ducimus porro, deserunt officiis labore at similique, placeat maxime dicta?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi nihil corporis eos. Omnis, cum ut reprehenderit veniam, excepturi quis vero sunt sed quaerat expedita odio accusantium quasi cupiditate aliquam qui quo! Repellat quas atque nostrum laborum a, sint hic consectetur officiis provident culpa possimus suscipit dolorum voluptas dolore fugit sapiente voluptatem dicta veritatis quaerat odio nulla, iste at? Unde, ut.</p>
+    </fieldset>
+    <br>
+    <fieldset>
+        <div id="header">
+            <h1>#헤더</h1>
+        </div>
+        <div id="wrap">
+            <div id="aside">
+                <h1>#사이드</h1>
+            </div>
+            <div id="content">
+                <h1>#내용</h1>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset> <!--div 안에 span 태그 넣기 : =mark 태그--> <!--class="txt1 bg1" 의미 : class를 한꺼번에 적용. text랑 bg를 동시에 지정가능-->
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate cum molestiae debitis sed ex nesciunt? <span class="txt1 bg1">Quos architecto modi eaque ad exercitationem atque doloribus suscipit fugiat dignissimos.</span> Error beatae <mark class="txt2 bg2">neque repudiandae.</mark>
+        </div>
+    </fieldset>
+</body>
+</html>

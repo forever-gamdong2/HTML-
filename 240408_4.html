@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]{background-color: aqua;} /*zencoding : 코지한 분위기~*/
+        input[type="password"]{background-color: aquamarine}
+        figure{
+            width: 600px;
+            height: auto;
+            border: 1px solid green;
+        }
+        #singer{
+            font-size: larger;
+        }
+        /* #singer h1, h2{     <- singer id를 가진 태그의 자식 h1과, 일반h2
+            color: blue;
+        } */
+        #singer h1, #singer h2{   /*  <- singer id를 가진 태그의 자식 h1과, singer id를 가진 태그의 자식 h2 */
+            color: blue;
+        }
+        article p{
+            color: darkmagenta;
+        }
+        article > div{ /*article에 있는 div 중 첫번째 자손만 호출*/ /*style이 중첩; 후손선택자가 더 우선이 되어 최종 darkmagenta 색상으로 나타남*/
+            color: darksalmon;
+        }
+        article div{
+            color: red;
+        }
+        #header{
+
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <figcation>속성선택자 써보기</figcation> 
+        <form action="">
+            <input type="text" name="" id="">
+            <input type="password" name="" id="">
+        </form>
+    </figure>
+
+    <figure>
+        <figcaption>선택자 부를 때 참고사항</figcaption>
+        <header id="singer">
+            <h1>발라드</h1>
+            <h2>필</h2>
+            <h3>취중고백</h3>
+        </header>
+            <h2>발매연도 2005.10.01.</h2>
+    </figure>
+
+    <figure>
+        <figcaption>후손선택자 vs 자손선택자</figcaption>
+        <article>
+            <div class="first">
+                text
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, dolores?</p>
+            </div>
+            <div class="second">
+                text
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, laboriosam?</P>
+            </div>
+            <div class="third">
+                text
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quo!</p>
+            </div>
+            <div class="forth">
+            </div>
+
+    
+        </article>
+    </figure>
+</body>
+</html>

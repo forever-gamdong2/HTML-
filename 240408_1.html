@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        h1{color: pink;} /*h1-태그이름 : 선택자   color-컬러 : 속성   pink-컬러값 : 속성값 */
+        p{color: blueviolet;}
+        #firsttext{color: brown;}
+        .deco1{color: yellow;}
+        ul li{color: green;} /*'자손 선택자' : ul>li(자손)>ol(손주)>li(증손주)... 등 ul>li에 속한 하위 메뉴들 다 선택*/
+        ol>li{font-weight: 1000;} /*직계 자손만 선택*/
+        ul>li:nth-child(1){color: gray;} /*'구조 선택자' : 1번째 자식만 선택*/
+        ul>li:nth-child(odd){color: orange}   /*odd(=2n+1):홀수번째 자식만 선택*/ /*even(=2n):짝수번째~*/
+        P{float: left;}
+        p::after{clear: both;} /*'문자선택자'라기 보다는 p 태그가 뜨고 난 다음의 상황에 대한 태그*/
+    </style>
+</head>             
+<body>
+    <fieldset> 
+        <legend><h1 style="color: blue;">CSS3 만나보기</h1></legend>
+            <h6><a href="#firsttext" target="_blank">menu1</a></h6>
+            <p id="firsttext" class="deco1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta tempora expedita sit commodi a sunt illo quaerat laboriosam odit. Nulla asperiores illo repellat, adipisci sit commodi ea voluptatum deserunt sunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio reprehenderit aliquam beatae nobis ab possimus sapiente molestias repellendus velit saepe, fuga corporis impedit veritatis dolor ipsam at sunt doloribus?</p>
+            <label for="nick"></label>
+            <input type="text" id="nick">
+            <hr>
+            <ul>
+                <li>오늘은 4월 8일입니다.
+                    <ol>
+                        <li>오늘은 CSS 선택자를 알아봅니다.</li>
+                    </ol>
+                </li>
+                <li>오늘은 월요일입니다.</li>
+                <li>내일 모레는 휴일입니다.</li>
+            </ul>
+    </fieldset>
+</body>
+</html>
+<!--1) inline 방식으로 스타일 적용 
+    (장) 우선권 젤 first
+    (단) html 문서 길이가 길어짐 - 웹표준에 맞지 않음
+        협업시 불편
+
+    2) embed 방식으로 스타일 적용; html 내부에 스타일 시트를 작성, head를 모으는 것
+    (장)body단에 작업한 모든 스타일 요소들을 한번에 볼 수 있음
+        SP(single page) 등의 간단한 웹페이지를 작업할 때 사용하기 좋음
+    (단) 여러 페이지를 연결하여 보여주는 웹페이지 에는 적합하지X
+
+    3) outlink 방식으로 스타일 적용
+    (장)
+    (단)
+
+    tip>
+    id => 1) CSS style(#{})과 body(id)를 연결할 때
+         2) label 과 input type 을 연결할 때
+         3) JS와 body를 연결할 때; <a href="#firsttext" target="_blank">menu1</a>     <-a href="" : ""로 이동하기 / target="_black" 새 창으로 열기
+    *id는 class 보다 우선순위 up
+        -->

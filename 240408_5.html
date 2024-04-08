@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sanitize.css-main/sanitize.css"></link>
+    <title>Document</title>
+    <style>
+        /*슈도엘리먼트(계층)의 일부 :
+        - 부모 선택자
+        - 자식 선택자 : '>', 1depth, 조금 더 축소된 개념
+        -자손(후손) 선택자 : ' (공란, spacebar)', 전체depth, 조금 더 포괄된 개념*/
+        
+        .main > h1{
+            background-color: aquamarine;
+        }
+        .main h1{
+            color: blue;
+        }
+        /*table > tr > td{
+            color: green;
+        }*/
+        /*테이블의 tbody처럼 구획이 나누어진 태그를 직계자손 속성으로 호출하는 것은 웹브라우저가 받아들이지 못하므로, 후손 선택자로 대체하자.*/
+        table th{
+            color: brown;
+        }
+        button{
+            background-color: lightyellow;
+            color: green;
+            font-size: 2em;
+            /*16px : 웹브라우저 기본 폰트크기 ≒ 0.75em
+            M : A~Z*/
+        }
+        button:hover{  /*버튼이 호버됐을 때*/
+            color: white;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <figure class="main">
+        <h1>제목1</h1>
+        <div class="sub">
+            <h1>제목2</h1>
+        </div>
+    </figure>
+
+    <figure>
+        <table border="1">
+            <tr>
+                <th>이름</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>개감동</td>
+                <td>경기도 수원시</td>
+            </tr>
+        </table>
+    </figure>
+
+    <figure>
+        <button>click!</button>
+    </figure>
+</body>
+</html>
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
