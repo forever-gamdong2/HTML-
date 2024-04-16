@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{  /*-- : 변수 이름 설정      -> 밑에서 해당 변수 이름 호출 그에 적용된 스타일이 불러와짐*/
+            --mcolor: color-mix(in srgb, #fd0 30%, white);  /*mcolor: main color*/
+            --scolor: #ffffff;     /*scolor: sub color*/
+            /* --mfont: 로 font 스타일도 선언 가능하지만 그건 색상값 입력 하는 것만큼 귀찮지 않으니까 굳이~*/
+        }
+        div>h3{      /*var(--~): various. 변수들 중 ~를 호출해 올래*/
+            color: var(--mcolor); 
+            background-color: blue;
+        }
+        p{
+            color: var(--scolor);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>컬러 소환하기</h3>
+        <p>루트 방식으로 컬러를 소환해봅니다</p>
+    </div>
+</body>
+</html>

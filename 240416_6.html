@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure{
+            margin: 300px;
+            box-shadow: 0px 0px 0px teal;  /*hidden*/ /*그림자 x축 길이, y축 길이, 흐림 정도(blur; 경계면이 흐려짐), 퍼짐성(spread), 색상, 효과*/
+        }
+        figure:hover{  /*마우스 갖다댔을 때*//*없다가 있는 것 보다 감췄다가(0 0 0 teal) 호버시 보여지는 것 을 개발자들이 더 선호*/
+            box-shadow: 10px 5px 10px 30px teal inset;  /*그림자 x축 길이, y축 길이, 흐림 정도(blur; 경계면이 흐려짐), 퍼짐성,(spread; size로 키워진 부분을 spread로 채움), 색상(, 효과)*/
+        }                                                 /*inset: 박스 안쪽에 그림자 적용*/
+        figcaption{
+            text-shadow: -5px 5px 5px rgb(255, 238, 0);
+            font-size: larger;
+        }
+        .a1{
+            width: 600px;
+            height: 400px;
+            background-color: aqua;
+        }                                             
+        .a2{ /*맨 윗줄은 vendor prefix; 브라우저에서 그라디언트 지원이 안될 경우를 대비하여 일반색상도 첨부함*/
+             /*일반 그라디언트 : css 그라디언트 생성기 맨아랫줄 코드 긁어오기.*/
+            width:600px;
+            height: 400px;
+            background: linear-gradient(91deg, rgba(153,203,226,1) 0%, rgba(224,170,170,1) 100%); /*CSS 그라디언트 속성 코드 생성*//*그라디언트 속성 값 작성 순서: 방향, 색상(최소 2가지. , 없이 %로 색상 분포점을 나타냄) *//*a컬러 0%: a컬러가 0% 지점부터 시작~*/
+            /*원랜 background-image: linear-gradient(~~~~~); 해야함. 근데 걍 background: 로 축약*/   
+            background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); /*CSS 그라디언트 제너레이터*/
+        }
+        .a3{   
+            width: 600px;
+            height: 400px;    /*그라디언트 효과; 멀티컬러 그라디언트*/
+            background: radial-gradient(50% 123.47% at 50% 50%, #00FF94 0%, #720059 100%), linear-gradient(121.28deg, #669600 0%, #FF0000 100%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+            background-blend-mode: screen, color-dodge, overlay, difference, normal;
+        }
+        .a4{ 
+            width: 600px;
+            height: 400px;
+            background:   /*그라디언트 효과; 그라디언트를 응용하여 패턴만듦*/
+                radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+                radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+                radial-gradient(circle closest-side at 42% 22%, #d35 43%, rgba(221,51,85,0) 45%),
+                radial-gradient(circle closest-side at 58% 22%, #d35 43%, rgba(221,51,85,0) 45%),
+                radial-gradient(circle closest-side at 50% 35%, #d35 32%, rgba(221,51,85,0) 27%),
+
+                radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 22%, #d35 40%, rgba(221,51,85,0) 45%) 52px 50px,
+                radial-gradient(circle closest-side at 60% 22%, #d35 40%, rgba(221,51,85,0) 45%) 48px 50px,
+                radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 37%) 50px 50px;
+                background-color:#b03;
+                background-size:100px 100px;
+        }
+        .a5{
+            width: 600px;
+            height: 400px;
+            background: rgb(34,193,195);
+            background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+        }
+        .self select{
+            background-image: linear-gradient(to top right, red 0%, rgb(4, 0, 255) 100%);
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <figure>
+            <img src="../images/chocolate-islands.jpg" alt="초콜릿 케이크 이미지">
+            <figcaption>달달한 디저트가 생각나는 계절</figcaption> <!--caption : 도움말-->
+        </figure>
+    </article>
+    <section>
+        <article class="a1"></article>
+        <article class="a2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non nisi unde, distinctio omnis sint consectetur, voluptate velit necessitatibus eligendi eos vel quasi molestias voluptatum cupiditate quia temporibus consequatur, nam sequi? Quia repudiandae magnam repellendus tenetur sed commodi? Nisi velit vel odio enim vero ipsam atque voluptas, maiores recusandae doloribus debitis?</article>
+        <article class="a3"></article>
+        <article class="a4"></article>
+        <article class="a5"></article>
+    </section>
+    <div class="self">
+        <select name="" id="">
+            <option value="" class="opt1">780~ 붉은계열</option>
+            <option value="" class="opt2">380~ 푸른계열</option>
+        </select>
+    </div>
+</html>

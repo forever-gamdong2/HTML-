@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        h1{
+            color: #444;
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+        }
+        p{
+            padding: 6px;
+            margin: 0;
+        }
+        p:nth-of-type(1){
+            background-color: hsl(239, 100%, 50%);
+        }
+        p:nth-of-type(2){
+            background-color: hsl(239, 100%, 60%);
+        }
+        p:nth-of-type(3){
+            background-color: hsl(239, 98%, 64%);
+        }
+        p:nth-of-type(4){
+            background-color: hsl(239, 100%, 69%);
+        }
+        p:nth-of-type(5){
+            background-color: hsl(239, 90%, 72%);
+        }
+        p:nth-of-type(6){
+            background-color: hsl(239, 100%, 80%);
+        }
+        p:nth-of-type(7){
+            background-color: hsl(239, 95%, 84%);
+        }
+        p:nth-of-type(8){
+            background-color: hsl(138, 83%, 49%);
+        }
+        .six{    /*color-mix 는 하위 웹브라우저에서 인식 못 할 수도~*/ /*sRGB = standard rgb*/ /*in srgb, 써주는 이유 : hex, hsl 등을 제일 잘 포괄하는게 srgb 임. 게다가 color-mix 탭하면 기본값으로 srgb가 입력됨. 걍 무조건 srgb쓰는게 편해~*/
+            background-color: color-mix(in srgb, #ffffff 80%, hsl(0, 100%, 60%));
+        }
+        .five{
+            background-color: color-mix(in srgb, #ffffff 70%, hsl(0, 100%, 60%));
+        }
+        .four{
+            background-color: color-mix(in srgb, #ffffff 60%, hsl(0, 100%, 60%));
+        }
+        .three{
+            background-color: color-mix(in srgb, #ffffff 50%, hsl(0, 100%, 60%));
+        }
+        .two{
+            background-color: color-mix(in srgb, #ffffff 40%, hsl(0, 100%, 60%));
+        }
+        .one{
+            background-color: color-mix(in srgb, #ffffff 30%, hsl(0, 100%, 60%));
+        }
+        .zero{
+            background-color: color-mix(in srgb, #ffffff 20%, hsl(0, 100%, 60%));
+        }
+    </style>
+</head>
+<body>
+    <h1>pH Scale</h1>
+    <p>14.0 매우 알카리성이 높은</p>
+    <p>13.0</p>
+    <p>12.0</p>
+    <p>11.0</p>
+    <p>10.0</p>
+    <p>9.0</p>
+    <p>8.0</p>
+    <p>7.0 기준치</p>
+    <p class="six">6.0</p>
+    <p class="five">5.0</p>
+    <p class="four">4.0</p>
+    <p class="three">3.0</p>
+    <p class="two">2.0</p>
+    <p class="one">1.0</p>
+    <p class="zero">0.0 매우 산성이 높은</p>
+</body>
+</html>
