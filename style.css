@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu:300,400,700');
+
+/*전체 폼 구성*/
+html, body {
+    font-family: 'Gaegu', sans-serif;
+    font-size: 100%;
+    margin: 0 auto; /*사이즈가 존재할때*/
+    padding: 0;
+}
+
+/*전체 폼 구성*/
+body{
+    box-sizing: border-box;
+}
+
+/*모든 작업요소를 담은 박스*/
+section{
+    border: 20px solid sandybrown;
+    border-radius: 20px;
+    width: 52vw;
+    /*정렬*/
+    position: relative; /*내 부모가 되라.*/ 
+    left: 22%;
+}
+
+/*제목류*/
+h1, h3, h4{
+    color: orange;
+    text-shadow: 0px 1px 0px palevioletred;
+}
+
+/*대제목*/
+h1{     
+    text-align: center;
+    background-color: bisque;
+    font-size: 2.5rem;
+    margin: 0 0 50px 0;
+    padding: 2rem;
+}
+
+/*남은 덩어리 왼쪽 여백 설정*/
+h3, p, table{
+    padding: 0 0 0 50px;
+}
+
+/*각 단락의 제목*/
+h3{
+    font-size: 2rem;
+    padding: 0; /*자유롭게*/
+    width: 80rem; /*자유롭게*/
+    margin-left: 20px; /*자유롭게*/
+}
+
+/*본문*/
+p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+/*----------첫번째 단락 스타일----------*/
+/*첫 번째 본문
+:first-child, :last-child, :first-of-type, :last-of-type*/
+article:nth-of-type(1) p{
+    text-shadow: 
+        0 0 2em orangered,
+        0 0 1em orange,
+        0 0 0.5em orange;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.bella{
+    text-emphasis: sesame orange;/*<em><--강조*/
+    color: orange;
+}
+
+/*----------두번째 단락 스타일----------*/
+figure{
+    width: 100%;
+    display: flex;
+    /* 반복되는 요소 작업 : repeating-linear-gradient*/
+    /*★*/
+    background-image:
+           repeating-linear-gradient( /* 반복 선형 그라데이션 */
+              45deg, /* 45° 회전시켜 대각선으로 만듦 */
+              #e5c046 0px, #e5c046 1px, /* 선의 색상과 폭 지정*/
+              rgba(0 0 0 / 0) 0%, rgba(0 0 0 / 0) 50% /* 선 사이의 여백 지정 */
+           ),
+           repeating-linear-gradient( /* 반복 선형 그라데이션 */
+              -45deg, /* -45° 회전시켜 대각선으로 만듦 */
+              #e5c046 0px, #e5c046 1px, /* 선의 색상과 폭 지정 */
+              rgba(0 0 0 / 0) 0%, rgba(0 0 0 / 0) 50% /* 선 사이의 여백 지정 */
+           );
+    background-size: 8px 8px; /* 선형 그라데이션을 지정한 background의 크기 */
+    background-repeat: repeat-x; /* 배경 반복 지정 */
+    background-position: center bottom;
+}
+
+/*★figure 정리*/
+
+figure .info{
+    display: flex; /*가로모드로 바꿔줘 플렉서블(유동적인)한 큰 칸*/
+    flex-direction: column;/*방향 row - 행-가로-x axis || column - 열-세로-y axis*/
+    flex-wrap:wrap; /*요소가 넘치게 될 때 줄바꿈 처리 */
+}
+
+.info_1, .info_2{
+    flex: 1; /*너비가 같다.*/
+}
+.info_3{
+    flex: 2; /*앞에 두 녀석에 비해 두배 너비다.*/
+}
+
+.profile{
+    filter: drop-shadow(15px 15px 0 orange);
+    width: 160px;
+    height: 160px;
+    padding-right: 50px;
+}
+
+/*----------세번째 단락 스타일----------*/
+.fallinluv{
+    text-decoration: orange wavy underline 2px;
+}
+
+/*----------네번째 단락 스타일----------*/
+table{
+    border-collapse: collapse;
+    margin-left: 20px;
+    float: left;
+    width: 300px;/*자유롭게 설정*/
+}
+
+table::after{
+    clear: both;
+}
+
+.year{
+    /*방향, A의 색과 값, B의 색과 값*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 70%,  orange 30%);}
+
+/*----------다섯번째 단락 스타일----------*/
+.please, .meet{
+    padding: 0 20px;
+    font-size: 1.8rem;
+    /*★*/
+    background-image:
+    repeating-linear-gradient( /* 반복 선형 그라데이션 */
+       90deg, /* 90° 회전시켜 수평선으로 만듦 */
+       #e5c046 0px, #e5c046 12px, /* 선 색상 지정 */
+       rgba(0 0 0 / 0) 12px, rgba(0 0 0 / 0) 20px /* 선 사이의 여백 지정 */
+    );
+    background-size: 20px 2px; /* 선형 그라데이션을 지정한 backgournd의 크기 */
+    background-repeat: repeat-x; /* 배경 반복 지정 */
+    background-position: center bottom;
+}
+
+.callme{
+    box-decoration-break: clone; /*각 행별로 동일한 스타일을 지정받을 수 있게 한다.★*/
+    background-color: orange;
+    padding: 10px;
+
+}
