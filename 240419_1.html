@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        body{
+            padding: 20px;
+        }
+        h1, h2, h3, a{
+            font-weight: 100;
+            color: #0088dd;
+            margin: 0px;
+        }
+        h1{
+            font-family: "Jua", sans-serif;
+            font-size: 200%;
+            text-shadow: 2px 2px black;
+            padding-bottom: 10px;
+        }
+        h2{
+            font-family: "Jua", sans-serif;
+            font-size: 90%;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+        h3{
+            font-size: 150%;
+        }
+        p{
+            font-family: "Jua", sans-serif;
+            line-height: 1.4em;
+            color: rgb(0, 0, 0);
+        }
+        p .intro :first-line{
+            font-weight: bold;
+        }
+        .credits{
+            color: gray;
+            font-style: italic;
+            text-align: right;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .image-container{
+            position: relative;
+            width: 100vw;
+            height: 50vh;
+            background-size: cover;
+            background-image: url('https://biz.chosun.com/resizer/bzKa6Gxe4CAc9EhSbaNSK6RynJM=/500x353/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/NRUXAKPYHMHQFSDTQALEKGMNGM.jpg');
+            background-position: center;
+        }
+        .image-container:hover::before{
+            content: '';
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, red, rgba(0, 0, 255, 0.6));
+        }
+    </style>
+</head>
+
+<body>
+    <h1>KSLV-1 나로</h1>
+    <h2>KSLV-1 "Naro"</h2>
+    <div class="image-container"></div>
+    <p class="intro">KSLV-1(Korea Space Launch Vehicle-1, 한국형발사체-1)<a class="space" href="https://www.kari.re.kr/narospacecenter/">나로호(羅老號)</a>
+        한국항공우주연구원이 KSLV 계획에 따라 2002년 개발에 착수하여 2009년과 2010년, 2013년 세 차례 발사한 대한민국 최초의 우주발사체 로켓.</p>
+    <h3>Naro History</h3>
+    <p>이름 '나로'는 대국민 명칭 공모전을 통해 선정되었으며,
+        로켓이 발사된 한국 최초의 우주센터 나로우주센터의 이름이자,
+        해당 우주센터가 위치한 전라남도 고흥군 외나로도에서 따온 것이다.
+        나로도는 성의 모습이 바다에서 보면 바람에 날리는 비단 같다는데서 유래한 이름이라 전해진다.</p>
+    <p class="credits">한국항공우주연구원, 러시아 흐루니체프</p>
+</body>
+</html>
