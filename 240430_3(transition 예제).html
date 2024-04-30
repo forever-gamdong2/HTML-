@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    figure{
+        border: 3px solid rgb(0, 145, 36);
+        width: 200px;
+        height: 200px;
+    }
+    #img {
+        width: 200px;
+        height: 200px;
+
+        transition-property: all;
+        transition-duration: 2s;
+        transition-delay: 0.5s;
+        transition-timing-function: ease-out;
+    }
+    #img:hover{
+        transform: rotate(90deg);
+    }
+    </style>
+</head>
+<body>
+        <figure>
+            <img id="img" src="https://img.freepik.com/free-photo/selective-focus-shot-pumpkins-ground-with-cute-golden-retriever-puppy_181624-18051.jpg?t=st=1714454833~exp=1714458433~hmac=4756b6ef4342ee89ced97bc89fecec5aea23e0c34c7e0cf2ee4c027f97c19bbc&w=996" alt="">
+        </figure>
+        <figcaption>이미지에 마우스를 올려보세요😆</figcaption>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 0 20px; /*40px*/
+            border: 5px solid black; /*10px*/
+            width: 100px; /*100px*/
+            height: 100px;
+            background-color: aqua;
+        }
+        .bg{
+            width: 600px;
+            height: 300px;
+            background-color: aqua;
+            background-image: url(./images/1.jpg), url(./images/2.jpg);
+            background-repeat: no-repeat;
+        }
+        .box_no10{
+            width: 100px;
+            background-color: red;
+            margin: 10px;
+            float: right;
+        }
+        .box_no10::after{
+            clear: both;
+        }
+
+        table{
+            background: gray;
+            color: aliceblue;
+        }
+        input{  border: none;
+                background-color: white;
+                border-radius: 20px;
+            }
+
+        #answer5 img{
+            border-radius: 50%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            float: left;
+        }
+        #answer5 img::after{
+            clear: both;
+        }
+        #answer5 p:last-of-type{
+        }
+
+        .card{
+            background-color: brown;
+            width: 360px;
+            height: auto;
+            padding: 25px;
+            border-radius: 30px;
+            text-align: center;
+            }
+        .card img{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <fieldset id="answer1">
+        <p>8번 문제 풀어보기</p>
+        <div class="box"></div>
+    </fieldset>
+
+    <fieldset id="answer2">
+        <p>9번 문제 풀어보기</p>
+        <div class="bg"></div>
+    </fieldset>
+
+    <fieldset id="answer3">
+        <p>10번 문제 풀어보기</p>
+            <div class="box_no10"><h1>1</h1></div>
+            <div class="box_no10"><h1>2</h1></div>
+            <div class="box_no10"><h1>3</h1></div>
+    </fieldset>
+
+    <fieldset id="answer4">
+        <p>11번 문제 풀어보기</p>
+        <form action="">
+                <table>
+                    <tr>
+                        <td>이름 : </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>닉네임 : </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit"></td>
+                    </tr>
+                </table>
+        </form>
+    </fieldset>
+
+    <fieldset id="answer5">
+        <p>12번 문제 풀어보기</p>
+        <img src="https://via.placeholder.com/150x150" alt="#">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </fieldset>
+
+    <fieldset id="answer6">
+        <p>13번 문제 풀어보기</p>
+        <div class="card">
+            <h3>별 헤는 밤</h3>
+            <img src="https://images.unsplash.com/photo-1515705576963-95cad62945b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="120px" height="120px">
+            <p>
+                가슴속에 하나둘 새겨지는 별을
+                이제 다 못 헤는 것은
+                쉬이 아침이 오는 까닭이요,
+                내일 밤이 남은 까닭이요,
+                아직 나의 청춘이 다하지 않은 까닭입니다.
+                
+                별 하나에 추억과
+                별 하나에 사랑과
+                별 하나에 쓸쓸함과
+                별 하나에 동경과
+                별 하나에 시와
+                별 하나에 어머니, 어머니...
+            </p>
+            <abbr title="">윤동주 [별 헤는 밤] 중에서</abbr>
+            </div>
+    </fieldset>
+</body>
+</html>
