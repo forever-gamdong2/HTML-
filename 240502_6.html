@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: skyblue;
+        }
+    </style>
+    <script>
+        alert('재미있겠죠?');
+    </script>
+</head>
+<body>
+    <h1>자바스크립트로 할 수 있는 일</h1>
+    <details>
+        <summary>자바스크립트가 하는 일</summary>
+        <ul>
+            <li>웹의 요소(elements, tag, component)를 제어할 수 있음</li>
+            <li>웹·앱을 만들 때 활용 가능</li>
+            <li>다양한 파생 라이브러리를 사용할 때 접근성이 좋음(vue, react 등)</li>
+            <li>서버도 다룰 수 있게 됨(node.js)</li>
+        </ul>
+    </details>
+    <details>
+        <summary>자바스크립트 프레임워크 종류</summary>
+        <ul>
+            <li>웹 앱 : vue, react, angular</li>
+            <li>서버 : node(호스팅/ 실시간 댓글, 소통, 삭제, 파일 관리, 보안 관리)</li>
+            <li>그래픽 : d3</li>
+            <li>DOM : jquery</li> <!--Document Object Model-->
+        </ul>
+    </details>
+    <details>
+        <summary>자바스크립트는 어느 위치에 작성할까?</summary>
+        <ul>
+            <li>CSS도 내부스타일 작성방식과 외부링크 작성방식이 있듯이, JS도 내부스크립트 작성방식과 외부스크립트 작성방식이 있음</li>
+            <li>HTML이나 CSS와 달리, JS는 대/소문자를 구분함</li>
+            <li>CSS는 head 안에 style 태그를 열어서 사용하지만, JS는 script(문서 어디에든 위치할 수 있음) 태그를 열어서 사용함<br>
+                <span>*script 태그는 문서 내 어디에나 위치할 수 있지만, 미디어 요소(글자 or 이미지 ...)를 다루는 script는 글자 or 이미지 태그가 다 실행되고 난 후에 위치,<br>
+                즉 다루려는 태그 위치보다 아래쪽에 위치해야 함. <br>
+                따라서 대부분 body 끝나기 전에 몰아서 배치함</span></li>
+            <li>삽입된 그 위치에서 바로 실행함</li>
+            <li>하나의 문서에서 script를 여러개 만들 수 있음</li>
+        </ul>
+    </details>
+</body>
+</html>

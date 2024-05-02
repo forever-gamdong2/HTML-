@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container{
+            width: 500px;
+            height: 300px;
+            position: relative;
+            border: 3px solid black;
+            overflow: hidden;
+        }
+        div div{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #red{
+            background-color: red;
+            top: 20px;
+            left: 20px;
+        }
+        #green{
+            background-color: green;
+            top: 20px;
+            right: 20px;
+        }
+        #yellow{
+            background-color: yellow;
+            bottom: 20px;
+            left: 20px;
+        }
+        #blue{
+            background-color: blue;
+            bottom: 20px;
+            right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Dummy Text</h1>
+    <div id="container">
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+        <div id="yellow"></div>
+    </div>
+    <h1>Dummy Text</h1>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1080px;
+            margin: 0, auto, 0, 8px;
+            background-color: rgb(255, 209, 209);
+        }
+        .left{
+            background-color: lightcoral;
+            float: left;
+            width: 740px;
+            height: 428px;
+        }
+        .right{
+            background-color: lightsalmon;
+            float: right;
+            width: 740px;
+            height: 428px;
+        }
+        .02_1::after{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <fieldset class="02_1">
+        <legend>02_1 정답</legend>
+        <div class="container">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellipsis</title>
+    <style>
+        h1, p{
+            width: 500px;
+            background-color: skyblue;
+        }
+        .ellipsis{
+            white-space: nowrap; /*white-space : 여백*//*줄바꿈 : 안함*/
+            overflow: hidden;   /*넘치는 요소 : 안보이게*/
+            text-overflow: ellipsis; /*ellipsis[일립시스] : 생략 부호(...)*//*넘치는 텍스트 : ...*/
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, voluptas?</h1>
+    <p class="ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, accusamus!</p>
+</body>
+</html>
