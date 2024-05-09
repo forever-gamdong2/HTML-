@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+ 
+
+//변수 이름만 지정된 구간
+var dis; // 할인율
+var discount; // 할인되는 금액 
+var pay;// 지불금액 
+
+//변수 중 사용자가 직접 입력하는 변수 구간
+let buy = prompt("~~~~~입력~~~~");
+
+//만원 이상 ~ 5만원 미만  (~:이며, 또한 = and = 두가지 조건 모두 충족 = &&)
+if (buy >= 10000 && buy < 50000) {
+	dis = 5;
+
+//5만원 이상~ 30만원 미만
+} else if (buy >= 50000 && buy < 300000)  {
+	dis = 7.5;
+
+//30만원 이상~
+} else if (buy >= 300000)  {
+ dis =10;
+
+} else {
+dis = 0;
+}
+
+//할인되는 금액
+discount = buy * (dis/100);
+
+//지불금액 = 구매금액 - 할인되는 금액
+pay = buy - discount;
+
+
+//결과
+document.write("-구매금액 : " + buy + "원<br>");
+document.write("-할인율 : " + dis + "퍼센트<br>");
+document.write("-할인금액 : " + discount + "원<br>");
+document.write("-지불금액 : " + pay + "원 입니다.<br>");
+</script>
+</head>
+<body>
+    
+</body>
+</html>
