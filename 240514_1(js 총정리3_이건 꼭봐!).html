@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //변수에 담을 수 있는 자료(데이터 형) 5가지 살펴보기
+        let age = 20;   //숫자(integer)형 데이터 
+        let email = "gamdong2@gmail.com";   //문자(string)형 데이터
+        let colors = ["blue", "cadetblue", "darkblue"]   //배열(array) 데이터(문자로 이루어진 덩어리)
+        let ok = true;   //Boolean(부울, 불; 참·거짓) 데이터 'true or false를 직접적으로 입력'
+        let member = {name:"홍길동",age:"21",address:"부산"}  //객체(object)형 데이터
+
+        //1) 숫자(integer)형 데이터 : javascript에서 사용하는 숫자(number)는 정수(integer)와 실수(floating point) 두가지로 나뉨
+        let x = 3;   //선언된 변수 (변수 박스 x한테 3이라는 숫자형 데이터(integer)를 넣음)
+        let y = 3.84;   //선언된 변수 (변수 박스 y한테 3.84이라는 숫자형 데이터(floating point)를 넣음)
+        z = x + y;   //선언되지 않은 변수 : 선언된 다른 변수들의 연산으로 도출됨
+        console.log(z);   //출력방식 중 1), F12 눌러서 웹 브라우저 콘솔에서 확인 '몇 줄에 이 콘솔 구문이 쓰였는지'
+    
+        //2) 문자(string)형 데이터 : 한 글자 or 여러 글자
+        //===ver. A===
+        var a = "귀여운 강아지";
+        var b = " 감동이";
+        document.write(a + '<br>' + b);
+        document.write("<br>");
+        //===ver. B===
+        var c = "강아지 이름은 '개감동' 입니다";
+        document.write(c);
+        document.write("<br>");
+
+        //3) 배열(array)형 데이터 : 하나의 변수박스에 여러개의 데이터 값을 저장할 수 있는 형식. 대괄호([])로 묶음. 배열 안에 있는 것은 0번째 부터 셈(금귤-0번째, 감말랭이-1번째)
+        var fruits = ["금귤", "감말랭이", "곶감", "반건시", "홍시"]   //배열 데이터 생성
+        document.write(fruits[1]);   //fruits 라는 배열 안에있는 1번째 데이터를 불러옴 '감말랭이'
+        document.write("<br>");
+        document.write(fruits[4]);
+        document.write("<br>");
+
+        //4) 판별(boolean) 데이터 : 참 -> true, 거짓 -> false
+            //at javascript, = 는 '좌항과 우항의 연결 통로(수리, 산술 적 의미)'를 의미함. 따라서 == or === 으로 '같다(비교연산자)'를 나타냄 
+        let d = 7;
+        let e = 10;
+        let f = 7;
+        document.write(d == e);
+        document.write("<br>");
+        document.write(d == f);
+        document.write("<br>");
+
+        //5) 객체(object) 데이터 : 값(value), 키워드(key). 중괄호({})로 묶음.
+        let score = {한국사:80, 토익:800, 수학:100}  //value : 80, 800, 100    key : 한국사, 토익, 수학
+        total = score.한국사 + score.토익 + score.수학;
+        avg = total / 3;
+        document.write("합계 " + total);
+        document.write("<br>");
+        document.write("평균 " + avg);
+    </script>  
+</body>
+</html>

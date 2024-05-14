@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a;  //a라는 변수가 있습니다
+        a = 3; //변수 a는 3입니다   //두 문장을 하나로 'var a = 3;'
+        document.write(a);   //document = 웹문서   //document.write('~') = 웹문서에 ~라고 써라   //변수 a는 문자열이 아니기때문에 따옴표 안에 안써도 됨
+        
+        /*=====출력 구문 베이직 4가지=====
+        1. document.write();   '변수나 데이터(문자, 숫자...)를 웹문서에 출력할 수 있는 가장 기본적인 방법 중 하나'
+        2. console.log();   '개발자모드(F12)의 console창에서 입력한 데이터값이 어떻게 처리되고있는지 확인가능(웹문서 화면에 출력되는게X)' '프로그램의 오류를 찾을 때 살펴보는 "디버깅"을 할 때 보는 창으로, 간단한 코드를 살펴볼 때에도 활용함'
+        3. window.alert();  '=  alert()' '웹 브라우저 측에 경고 팝업창 형태로 띄우는 출력 방식. 가장 기본적인 방법'
+        4. .innerHTML    html(body)에 요소를 추가하여 출력하는 방식*/
+        
+        var a = 10;   //var, let, const... '선언문 : 변수를 선언함'
+        var b = 20; 
+        c = a + b;
+        document.write(c);
+        
+        var name = "홍길동";   //문자열(string); 프로그래밍 언어에서는 하나 또는 하나 이상의 문자를 string이라고 표현함
+        window.alert(name);   //문자열 담을 때 ''또는 ""로 감싸서 표현함. 변수나 숫자는 따옴표 감쌀 필요x
+
+        console.log(10+20);
+
+        //document.getElementById("inje").innerHTML = "Hello Javascript";      <- <p id="inje">보다 위에 있으므로 출력이 안됨
+    </script>
+    
+    <h3>이제 innerHTML을 사용해서 html요소를 추가해보겠습니다</h3>  <!--script 바깥이지만 아직 body 안쪽임-->
+    <p id="inje"></p>
+
+    <script>
+        document.getElementById("inje").innerHTML = "Hello Javascript";   //"inje"라는 id를 갖는 <p>를 불러오고 그 공간에 "Hello Javascript"라는 문자열을 출력
+        document.getElementById("inje").innerHTML = "감동아 보고싶어";
+    </script>
+
+</body>
+</html>
