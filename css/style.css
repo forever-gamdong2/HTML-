@@ -1,0 +1,324 @@
+@charset "utf-8";  /*@charset은 위/앞에 공백이 없게 처리!!!! 스타일 시트 젤 첫머리에 와야함*/
+
+/*24개 유형 공통사항*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+    color: #333;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;     /*이미지 최대폭이 100% - 반응형이 아니더라도, 다양한 화면에서 일관성있는 형태를 유지하기 위해*/
+}
+table{
+    /*border: 1px solid #fff;*/ /*table 에다 border 설정 주지말고, tr에 주기*/
+    border-collapse: collapse;
+    width: 100%;
+}
+button{
+    cursor: pointer;     /*버튼 처럼 눌리는 요소 : 커서를 포인터로 변경*/
+}
+
+
+/*이 유형 만의 사항*/
+/*=====A, B, C, D 를 묶는 전체 요소=====*/
+.wrap{
+    position: relative;     /*최대 부모인 .wrap에 relative를 부여; 나머지 요소들이 이를 기준으로 position 정렬*/
+}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*=====A 구역=====*/
+header{
+    height: 100px;
+    position: relative;    /*얘를 기준으로 nav 마우스 오버시 보여지는 메뉴창들의 깊이(z-index)를 설정 가능*/
+    padding-top: 20px;     /*로고를 위에서부터 조금 내림*/
+    padding-left: 20px;    /*로고를 왼쪽에서부터 조금 밈*/
+}
+nav{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 60px;
+}
+nav > ul{     /*nav의 직계자식 ul*/
+    display: flex;
+}   
+nav > ul > li > a{     /*1depth 메뉴*/
+    display: block;     /*a 태그에 block 주는 이유 : 태그에 height 부여(inline은 height 지정불가)하고, 이후 나올 submenu들이 세로로 떨궈지도록*/
+    width: 180px;
+    padding: 10px;
+    background-color: rgb(5, 61, 87);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+} 
+nav > ul > li > a:hover{
+    background-color: rgb(196, 196, 196);
+    color: rgb(5, 61, 87);
+} 
+.sub{ 
+    display: none;     /*일단 보이지마. 호버할 때만 나타나!*/
+}
+.sub li a{     /*2depth 메뉴*/
+    display: block;
+    padding: 10px;
+    color: rgb(0, 95, 139);
+    text-align: center;
+    font-size: 14px;     /*기본 크기가 16px 이라 조금 줄여줌*/
+}
+.sub li a:hover{
+    background-color: rgba(255, 255, 255, 0.507);
+    color: rgb(5, 61, 87);
+    font-weight: bold;
+}
+.menuBg{
+    width: 100%;
+    height: 120px; 
+    background-color: rgba(5, 61, 87, .5);
+    position: absolute;
+    top: 100px;     /*header 기준으로 top 100px 내림, left 0 밈 */
+    left: 0;
+    z-index: 9;
+    display: none;
+}
+
+/*=====B구역=====*/
+.slide{
+    height: 300px;
+    background-color: black;
+    position: relative;      /*.slide 에 포함된 배너들의 z-index 를 다양하게(그래야 배너 이미지가 넘어가는 순간 순간에 bgcolor가 보이지 않고 다음 사진이 보이게 됨) 부여할 수 있도록 relative를 부여*/
+}
+.slide ul li{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.slide ul li.s1{     /*띄어쓰기 하면 : 후손선택자('li의 후손 중 별명이 s1인 것')   /  띄어쓰기 안하면 : ~이면서(&&)('별명이 s1인 li')*/
+    background: url(../images/s1.jpg) no-repeat center/cover;
+    display: block;
+}
+.slide ul li.s2{
+    background: url(../images/s2.jpg) no-repeat center/cover;
+}
+.slide ul li.s3{
+    background: url(../images/s3.jpg) no-repeat center/cover;
+}
+.slide ul li a{
+    display: block;
+    height: 100%;
+}
+.slide ul li h2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+}
+
+
+/*=====C구역=====*/
+/*전체 콘텐츠영역 맥락*/
+.con{     
+    height: 200px;
+    /*background-color: skyblue;*/
+    display: flex;
+}
+.con article{
+    width: 400px;
+    padding-top: 10px;
+}
+.con h2{
+    width: 150px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/*공지사항 맥락*/
+.con1{
+    background-color:#e7e7e7;
+}
+.con1 h2{
+    color: #fff;
+    text-align: center;
+    background-color:rgb(22, 31, 148);
+    border-radius: 10px 10px 0 0;
+}
+.con1 div{
+    background:rgb(22, 31, 148);
+    padding: 10px;
+    height: 150px;
+}
+.con1 table{
+    color: #fff;
+    border: #d4d4d4;
+}
+.con1 table tr{
+    border-bottom: 1px dashed #fff;
+    border-top: 1px dashed #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.con1 table th{
+    text-align: left;
+}
+.con1 table a{
+    width: 200px;
+    padding: 5px;
+    color: #fff;
+    /*말 줄임표*/
+    text-overflow: ellipsis;
+    white-space: nowrap;     /*white-space(공백) : no-wrap '줄바꿈 처리하지 않는다'*/
+    overflow: hidden;
+    display: block;
+    padding: 5px;
+}
+.con1 table td{
+
+}
+
+/*갤러리 맥락*/
+.con2{
+    background-color:#e7e7e7;
+}
+.con2 h2{
+    color: #fff;
+    text-align: center;
+    background-color:rgb(71, 5, 116);
+    border-radius: 10px 10px 0 0;
+}
+.con2 div{
+    background-color:rgb(71, 5, 116);
+    height: 150px;
+}
+.con2 div ul{
+    display: flex;
+    justify-content: space-around;
+}
+.con2 div ul li{     /*li 와 img의 간격이 멈; img 사이즈 조절하려면 li 보단 img 자체에 크기 선언해주기*/
+    padding-top: 10px;
+}
+.con2 div ul li:hover{
+    opacity: .7;
+}
+.con2 div ul li a{}
+.con2 div ul li img{
+    width: 120px;
+    height: 120px;
+}
+
+/*바로가기 맥락*/
+.con3{
+    background-color:rgb(39, 103, 163);
+}
+.con3 h2{
+    color: #fff;
+    text-align: center;
+}
+.con3 ul{
+    padding-top: 10px; 
+    display: flex;
+    justify-content: center;
+    gap: 25px;     /*grid 뿐만 아니라 flex에서도 gap 사용 가능*/
+}
+.con3 ul li{
+    text-align: center;
+}
+.con3 ul li a{
+    color: #dae9ff;
+    display: block;     
+}
+.con3 ul li a p{
+    padding-top: 30px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(132, 172, 190, 0.5);
+    border-radius: 20px;
+}
+.con3 ul li a p:hover{
+    background-color: rgba(1, 61, 88, 0.5);
+}
+
+
+/*=====D구역=====*/
+footer{
+    height: 100px;
+    background-color: rgb(5, 61, 87);
+    position: relative;
+}
+footer .fmenu{
+    display: flex;
+    gap: 15px;
+    margin-left: 200px;
+}
+footer .fmenu li{
+    border-right: 1px solid #fff;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+footer .fmenu li a{
+    color:#fff;
+}
+footer .fmenu li:last-of-type{
+    border-right: none;     /*'border-right: 0(px);' 으로 해도 border 사라짐*/
+}
+
+
+footer .fcopy{
+    color:#fff;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 400px;
+}
+
+
+footer select{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+
+/*=====POPUP구역=====*/
+.popup{
+    background-color: #fff;
+    position: absolute;    /*'position: absolute;' 설정 이유 : 부모요소는 없지만, top/right 값 등을 이용해 위치를 지정해주려고*/
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #cecece;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    /*margin-left: -200px;
+    margin-top: -200px;*/     /*이렇게 가운데로 몰 수 있지만, 아래의 transform으로 이동할 수도 있음*/
+    transform: translate(-50%, -50%);     /*translateX(), translateY() 한번에 작성*/
+    display: none;
+}
+.popup h2{
+    margin-bottom: 20px;
+}
+.popup .img{
+    padding-left: 50px;
+}
+.popup .text{
+    text-align: center;
+}
+.popup .button{
+    text-align: right;
+}
