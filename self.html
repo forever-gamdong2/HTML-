@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-3.7.1.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+<body>
+
+    <div class="box">
+        <!--A 영역-->
+        <header>
+            <div class="wrap">
+                <div class="logo"><a href="#"><img src="./images/logo.png" alt="로고"></a></div>
+                <nav class="navig">
+                    <ul class="menu">
+                        <li><a href="#">축제소개</a>
+                            <ul class="submenu">
+                                <li><a href="#">초대의 글</a></li>
+                                <li><a href="#">축제개요</a></li>
+                                <li><a href="#">축제연혁</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">행사안내</a>
+                            <ul class="submenu">
+                                <li><a href="#">셔틀버스안내</a></li>
+                                <li><a href="#">행사안내</a></li>
+                                <li><a href="#">행사일정</a></li>
+                                <li><a href="#">소공연장</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">홍보마당</a>
+                            <ul class="submenu">
+                                <li><a href="#">축제소식</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">음식레시피</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">참여마당</a>
+                            <ul class="submenu">
+                                <li><a href="#">참가후기</a></li>
+                                <li><a href="#">연꽃갤러리</a></li>
+                                <li><a href="#">포토갤러리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    
+        <!--B 영역-->
+        <div class="slide">
+            <a href="#">
+                <span>12회 부여가을연꽃축제 시작됩니다.</span>
+                <img src="./images/s1.jpg" alt="슬라이드1">
+            </a>
+            <a href="#">
+                <span>엄마손맛 연꽃 건강한 먹거리 이벤트</span>
+                <img src="./images/s2.jpg" alt="슬라이드2">
+            </a>
+            <a href="#">
+                <span>제 2회 부여 연꽃 축제 가요제</span>
+                <img src="./images/s3.jpg" alt="슬라이드3">
+            </a>
+        </div>
+
+        <!--C 영역-->
+        <div class="contents">
+            <div class="notice">
+                <div class="tab"><h4>공지사항</h4></div>
+                <ul>
+                    <li class="click">
+                        <a href="#">연꽃 구입에 대하여
+                        <span>08/03</span></a>
+                    </li>
+                    <li>
+                        <a href="#">학교, 관공서 연꽃,수련
+                        <span>07/01</span></a>
+                    </li>
+                    <li>
+                        <a href="#">냉동연꽃, 연잎 판매
+                        <span>03/24</span></a>
+                    </li>
+                    <li>
+                        <a href="#">수련과 연꽃 구별
+                        <span>03/02</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <div class="tab"><h4>갤러리</h4></div>
+                <ul>
+                    <li><a href="#"><img src="./images/g1.jpg" alt="갤러리1"></a></li>
+                    <li><a href="#"><img src="./images/g2.jpg" alt="갤러리2"></a></li>
+                    <li><a href="#"><img src="./images/g3.jpg" alt="갤러리3"></a></li>
+                </ul>
+            </div> 
+            <div class="shortcut">
+                <div class="tab"><h4>바로가기</h4></div> 
+                <ul>
+                    <li>   
+                        <a href="#">
+                            <img src="./images/icon01.png" alt="아이콘1">
+                            <span>출석체크</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/icon02.png" alt="아이콘2">
+                            <span>오시는길</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/icon03.png" alt="아이콘3">
+                            <span>즐겨찾기</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--D 영역-->
+        <footer>
+            <div class="f_wrap">
+                <div class="copy">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br><br>
+                    $copy;Copyright 2024. class303 All rights reserved.</div>
+                <div class="f_contents">
+                    <div class="sns">
+                        <div><a href="#"><img src="./images/sns1.png" alt="sns1"></a></div>
+                        <div><a href="#"><img src="./images/sns2.png" alt="sns2"></a></div>
+                        <div><a href="#"><img src="./images/sns3.png" alt="sns3"></a></div>
+                    </div>
+                    <div class="site">
+                        <select name="" id="">
+                            <option>Family site</option>
+                            <option>시흥연성관곡지</option>
+                            <option>부여서동연꽃축제</option>
+                            <option>무안연꽃축제</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--팝업 영역-->
+    <div id="modal">     <!--class가 아닌 id로 별명설정-->
+        <div class="modal_up">     <!--이건 class로 부여!-->
+            <div class="title">제 12회 부여 가을 연꽃축제!</div>
+            <div class="body">부여 가을 연꽃축제가 시작됩니다!</div>
+            <button>x 닫기</button>
+        </div>
+    </div>
+</body>
+</html>

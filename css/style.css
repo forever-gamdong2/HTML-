@@ -1,324 +1,294 @@
-@charset "utf-8";  /*@charset은 위/앞에 공백이 없게 처리!!!! 스타일 시트 젤 첫머리에 와야함*/
+@charset "utf-8";
 
-/*24개 유형 공통사항*/
+/*전체 영역*/
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-}
-body{
-    background-color: #fff;
+    font-family: "맑은고딕";
+    list-style-type: none;
     color: #333;
 }
-li{
-    list-style-type: none;
+html, body{
+    background: #ffffff;
+    min-width: 1000px;
 }
 a{
     text-decoration: none;
-}
-img{
-    max-width: 100%;     /*이미지 최대폭이 100% - 반응형이 아니더라도, 다양한 화면에서 일관성있는 형태를 유지하기 위해*/
-}
-table{
-    /*border: 1px solid #fff;*/ /*table 에다 border 설정 주지말고, tr에 주기*/
-    border-collapse: collapse;
-    width: 100%;
-}
-button{
-    cursor: pointer;     /*버튼 처럼 눌리는 요소 : 커서를 포인터로 변경*/
-}
-
-
-/*이 유형 만의 사항*/
-/*=====A, B, C, D 를 묶는 전체 요소=====*/
-.wrap{
-    position: relative;     /*최대 부모인 .wrap에 relative를 부여; 나머지 요소들이 이를 기준으로 position 정렬*/
-}
-.inner{
-    width: 1200px;
-    margin: 0 auto;
-}
-
-/*=====A 구역=====*/
-header{
-    height: 100px;
-    position: relative;    /*얘를 기준으로 nav 마우스 오버시 보여지는 메뉴창들의 깊이(z-index)를 설정 가능*/
-    padding-top: 20px;     /*로고를 위에서부터 조금 내림*/
-    padding-left: 20px;    /*로고를 왼쪽에서부터 조금 밈*/
-}
-nav{
-    position: absolute;
-    z-index: 10;
-    right: 0;
-    top: 60px;
-}
-nav > ul{     /*nav의 직계자식 ul*/
-    display: flex;
-}   
-nav > ul > li > a{     /*1depth 메뉴*/
-    display: block;     /*a 태그에 block 주는 이유 : 태그에 height 부여(inline은 height 지정불가)하고, 이후 나올 submenu들이 세로로 떨궈지도록*/
-    width: 180px;
-    padding: 10px;
-    background-color: rgb(5, 61, 87);
-    color: white;
-    text-align: center;
-    font-weight: bold;
-} 
-nav > ul > li > a:hover{
-    background-color: rgb(196, 196, 196);
-    color: rgb(5, 61, 87);
-} 
-.sub{ 
-    display: none;     /*일단 보이지마. 호버할 때만 나타나!*/
-}
-.sub li a{     /*2depth 메뉴*/
     display: block;
-    padding: 10px;
-    color: rgb(0, 95, 139);
-    text-align: center;
-    font-size: 14px;     /*기본 크기가 16px 이라 조금 줄여줌*/
 }
-.sub li a:hover{
-    background-color: rgba(255, 255, 255, 0.507);
-    color: rgb(5, 61, 87);
-    font-weight: bold;
+
+
+.box{
+    width: 1000px;
+    height: 650px;
 }
-.menuBg{
-    width: 100%;
-    height: 120px; 
-    background-color: rgba(5, 61, 87, .5);
+/*A 영역*/
+header{
+    float: left;
     position: absolute;
-    top: 100px;     /*header 기준으로 top 100px 내림, left 0 밈 */
-    left: 0;
-    z-index: 9;
+    background-color: lightgray;
+}
+.wrap{
+    width: 200px;
+    height: 650px;
+    float: left;
+}
+.logo{
+    width: 200px;
+    height: 80px;
+    padding-top: 20px;
+    float: left;
+}
+.navig{
+    float: left;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    z-index: 1;
+    text-align: center;
+}
+.menu>li{
+    float: left;
+    width: 180px;
+}
+.menu>li>a{
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #804f97;
+    color: #fff;
+}
+.menu>li>a:hover{
+    background: #fff;
+    color: #804f97;
+}
+.submenu{
+    float:left;
+    width: 180px;
+    height: 100%;
+    z-index: 1;
     display: none;
 }
-
-/*=====B구역=====*/
-.slide{
-    height: 300px;
-    background-color: black;
-    position: relative;      /*.slide 에 포함된 배너들의 z-index 를 다양하게(그래야 배너 이미지가 넘어가는 순간 순간에 bgcolor가 보이지 않고 다음 사진이 보이게 됨) 부여할 수 있도록 relative를 부여*/
+.submenu>li>a{
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgb(210, 193, 255);
+    color: #333;
 }
-.slide ul li{
+.submenu>li>a:hover{
+    color: rgb(210, 193, 255);
+    background: #333;
+}
+
+
+/*B 영역*/
+.slide{
+    width: 800px;
+    height: 350px;
+    float: right;
+    position: relative;
+}
+.slide>a{
+    width: 800px;
+    height: 350px;
+    display: block;
+    position: absolute;
+}
+.slide span{
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background: rgba(158, 158, 158, 0.555);
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slide img{
+    width: 800px;
+    height: 350px;
+}
+
+
+
+/*C 영역*/
+/*공통*/
+.contents{
+    width: 800px;
+    height: 200px;
+    float: right;
+}
+.tab{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgb(253, 192, 255);
+    float: left;
+}
+.tab h4{
+    color: white;
+}
+/*공지*/
+.notice{
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+.notice ul{
+    height: 150px;
+    width: 300px;
+    float: left;     /*모든 ul내 요소들을 가로로 나란히 정렬*/
+    background-color: rgb(253, 192, 255);
+    color: #fff;
+    font-size: 14px;
+}
+.notice ul li{
+    padding: 10px;
+}
+.notice li span{
+    float: right;
+    color: purple;
+}
+.notice li:hover{
+    font-weight: bold;
+}
+/*갤러리*/
+.gallery{
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+.gallery ul{
+    height: 150px;
+    width: 300px;
+    float: left;
+    background-color: rgb(253, 192, 255);
+}
+.gallery ul li{
+    float: left;
+    padding: 10px;
+    margin-top: 20px;
+}
+.gallery img{
+    width: 80px;
+    height: 80px;
+}
+.gallery li:hover{
+    opacity: .5;
+}
+/*바로가기*/
+.shortcut{
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+.shortcut ul{
+    width: 200px;
+    height: 150px;
+    padding-top: 40px;
+    padding-left: 20px;
+    background-color: rgb(253, 192, 255);
+    float: right;
+}
+.shortcut ul li a{
+    float: left;
+    background-color: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+.shortcut span{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+
+/*D 영역*/
+footer{
+    float: right;
+}
+.f_wrap{
+    width: 800px;
+    height: 100px;
+    background: rgb(114, 0, 99);
+    float: right;
+}
+.copy{
+    width: 500px;
+    height: 100px;
+    float: left;
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    margin: 10px;
+}
+.f_contents{
+    width: 150px;
+    height: 100px;
+    float: right;
+}
+.sns{
+    width: 150px;
+    height: 50px;
+    float: right;
+}
+.sns a{
+    float: left;
+    margin: 10px auto 10px 30px;
+}
+.site{
+    width: 150px;
+    height: 50px;
+    float: right;
+    padding-left: 10px;
+}
+
+/*팝업 영역*/
+#modal{
     width: 100%;
-    height: 300px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1;
     display: none;
 }
-.slide ul li.s1{     /*띄어쓰기 하면 : 후손선택자('li의 후손 중 별명이 s1인 것')   /  띄어쓰기 안하면 : ~이면서(&&)('별명이 s1인 li')*/
-    background: url(../images/s1.jpg) no-repeat center/cover;
-    display: block;
+#modal.active{
+    display: block;     /*#modal 에 active란 class 이름이 더해지는 순간 display: none(안보임) -> display:block(보임)*/
 }
-.slide ul li.s2{
-    background: url(../images/s2.jpg) no-repeat center/cover;
-}
-.slide ul li.s3{
-    background: url(../images/s3.jpg) no-repeat center/cover;
-}
-.slide ul li a{
-    display: block;
-    height: 100%;
-}
-.slide ul li h2{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-weight: bold;
-}
-
-
-/*=====C구역=====*/
-/*전체 콘텐츠영역 맥락*/
-.con{     
-    height: 200px;
-    /*background-color: skyblue;*/
-    display: flex;
-}
-.con article{
+.modal_up{
     width: 400px;
-    padding-top: 10px;
-}
-.con h2{
-    width: 150px;
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    padding: 5px;
-    margin-left: 10px;
-}
-
-/*공지사항 맥락*/
-.con1{
-    background-color:#e7e7e7;
-}
-.con1 h2{
-    color: #fff;
-    text-align: center;
-    background-color:rgb(22, 31, 148);
-    border-radius: 10px 10px 0 0;
-}
-.con1 div{
-    background:rgb(22, 31, 148);
-    padding: 10px;
-    height: 150px;
-}
-.con1 table{
-    color: #fff;
-    border: #d4d4d4;
-}
-.con1 table tr{
-    border-bottom: 1px dashed #fff;
-    border-top: 1px dashed #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-}
-.con1 table th{
-    text-align: left;
-}
-.con1 table a{
-    width: 200px;
-    padding: 5px;
-    color: #fff;
-    /*말 줄임표*/
-    text-overflow: ellipsis;
-    white-space: nowrap;     /*white-space(공백) : no-wrap '줄바꿈 처리하지 않는다'*/
-    overflow: hidden;
-    display: block;
-    padding: 5px;
-}
-.con1 table td{
-
-}
-
-/*갤러리 맥락*/
-.con2{
-    background-color:#e7e7e7;
-}
-.con2 h2{
-    color: #fff;
-    text-align: center;
-    background-color:rgb(71, 5, 116);
-    border-radius: 10px 10px 0 0;
-}
-.con2 div{
-    background-color:rgb(71, 5, 116);
-    height: 150px;
-}
-.con2 div ul{
-    display: flex;
-    justify-content: space-around;
-}
-.con2 div ul li{     /*li 와 img의 간격이 멈; img 사이즈 조절하려면 li 보단 img 자체에 크기 선언해주기*/
-    padding-top: 10px;
-}
-.con2 div ul li:hover{
-    opacity: .7;
-}
-.con2 div ul li a{}
-.con2 div ul li img{
-    width: 120px;
-    height: 120px;
-}
-
-/*바로가기 맥락*/
-.con3{
-    background-color:rgb(39, 103, 163);
-}
-.con3 h2{
-    color: #fff;
-    text-align: center;
-}
-.con3 ul{
-    padding-top: 10px; 
-    display: flex;
-    justify-content: center;
-    gap: 25px;     /*grid 뿐만 아니라 flex에서도 gap 사용 가능*/
-}
-.con3 ul li{
-    text-align: center;
-}
-.con3 ul li a{
-    color: #dae9ff;
-    display: block;     
-}
-.con3 ul li a p{
-    padding-top: 30px;
-    margin-bottom: 10px;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(132, 172, 190, 0.5);
-    border-radius: 20px;
-}
-.con3 ul li a p:hover{
-    background-color: rgba(1, 61, 88, 0.5);
-}
-
-
-/*=====D구역=====*/
-footer{
-    height: 100px;
-    background-color: rgb(5, 61, 87);
-    position: relative;
-}
-footer .fmenu{
-    display: flex;
-    gap: 15px;
-    margin-left: 200px;
-}
-footer .fmenu li{
-    border-right: 1px solid #fff;
-    margin-top: 20px;
-    padding-right: 10px;
-}
-footer .fmenu li a{
-    color:#fff;
-}
-footer .fmenu li:last-of-type{
-    border-right: none;     /*'border-right: 0(px);' 으로 해도 border 사라짐*/
-}
-
-
-footer .fcopy{
-    color:#fff;
-    font-size: 14px;
-    margin-top: 20px;
-    margin-left: 400px;
-}
-
-
-footer select{
-    position: absolute;
-    right: 20px;
-    top: 40px;
-}
-
-/*=====POPUP구역=====*/
-.popup{
-    background-color: #fff;
-    position: absolute;    /*'position: absolute;' 설정 이유 : 부모요소는 없지만, top/right 값 등을 이용해 위치를 지정해주려고*/
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px 5px #cecece;
+    height: 300px;
+    position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 11;
-    /*margin-left: -200px;
-    margin-top: -200px;*/     /*이렇게 가운데로 몰 수 있지만, 아래의 transform으로 이동할 수도 있음*/
-    transform: translate(-50%, -50%);     /*translateX(), translateY() 한번에 작성*/
-    display: none;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
 }
-.popup h2{
-    margin-bottom: 20px;
-}
-.popup .img{
-    padding-left: 50px;
-}
-.popup .text{
+.title{
+    margin-top: 30px;
     text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 100px;
 }
-.popup .button{
-    text-align: right;
+.body{
+    text-align: center;
+    font-size: 20px;
+}
+.modal_up button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
