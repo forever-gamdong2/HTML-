@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+<body>
+    
+    <!--A 구역-->
+    <header>
+        <div class="hwrap">
+            <div class="logo"> <!--로고-->
+                <a href="#"><img src="./images/logo.png" alt="로고"></a>
+            </div>
+            <nav class="navig"> <!--내비게이션-->
+                <ul class="menu">
+                    <li><a href="#">탑</a>
+                        <ul class="submenu">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul class="submenu">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">점퍼</a></li>
+                            <li><a href="#">코트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">팬츠/스커트</a>
+                        <ul class="submenu">
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">스커트</a></li>
+                            <li><a href="#">데님</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul class="submenu">
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <div class="bwrap">  <!--B + C 구역-->
+        <!--B 구역-->
+        <div class="slide">
+            <a href="#">
+                <span>ON쇼핑몰 홈페이지</span>
+                <img src="./images/img1.jpg" alt="슬라이드1">
+            </a>
+            <a href="#">
+                <span>이달의 쇼핑 이벤트</span>
+                <img src="./images/img2.jpg" alt="슬라이드2">
+            </a>
+            <a href="#">
+                <span>장바구니 할인 이벤트</span>
+                <img src="./images/img3.jpg" alt="슬라이드3">
+            </a>
+        </div>
+
+        <!--C 구역-->
+        <div class="contents">
+            <ul class="tabmenu">   <!--.contents 중 tabmenu 영역-->
+                <li class="active">   <!--탭 타이틀 + 컨텐츠-->
+                    <a href="#">공지사항</a>   <!--탭 타이틀-->
+                    <div class="notice">   <!--탭 컨텐츠-->
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    3월 재입고 품목을 알려드립니다.	
+                                    <span>2020.03.14</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    반품/환불 규정에 대해 알려드립니다.
+                                    <span>2020.03.14</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    S/S 시즌 신규 의류 신상품 안내	
+                                    <span>2020.03.14</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    신규회원 대상 할인 이벤트 안내
+                                    <span>2020.03.14</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">갤러리</a>
+                    <div class="gallery">
+                        <ul>
+                            <li><a href="#"><img src="./images/icon1.jpg" alt="갤러리1"></a></li>
+                            <li><a href="#"><img src="./images/icon2.jpg" alt="갤러리2"></a></li>
+                            <li><a href="#"><img src="./images/icon3.jpg" alt="갤러리3"></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="banner">
+                <a href="#">
+                    <span>배너</span>
+                    <img src="./images/banner.jpg" alt="배너">
+                </a>
+            </div>
+            <div class="shortcut">
+                <a href="#">
+                    <span>바로가기</span>
+                    <img src="./images/shortcut.jpg" alt="바로가기">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--D 구역-->
+    <footer>
+        <div class="flogo">  <!--하단 로고-->
+            <a href="#"><img src="./images/flogo.png" alt="하단로고"></a>
+        </div>
+        <div class="copy">COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</div>  <!--카피라이트-->
+        <div class="sns">  <!--sns-->
+            <ul>
+                <li>
+                    <a href="#"><img src="./images/sns1.jpg" alt="sns1"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/sns2.jpg" alt="sns2"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./images/sns3.jpg" alt="sns3"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+    <!--레이어 팝업-->
+    <div id="layer">
+        <div class="layerup">
+            <div class="title"><h4>신규회원 대상 할인 이벤트 안내</h4></div>
+            <div class="body">
+                즐거운 쇼핑 환경을 위해 항상 노력하는 ON쇼핑몰입니다.<br>
+                고객님들께 한 단계 더 나아가 보답하는 ON쇼핑몰이 되고자<br>
+                신규회원 대상 10% 할인 이벤트를 실시하고 있습니다.<br>
+                웹과 모바일에서 모두 이용 가능하며,<br>
+                수준 높은 서비스를 위해 앞으로도 꾸준히 노력할 것을 약속드립니다. </div>
+            <button>X 닫기</button>
+        </div>
+    </div>
+
+</body>
+</html>

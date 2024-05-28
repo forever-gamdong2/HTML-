@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/*전체*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    color: #333333;
+    font-family: "맑은 고딕";
+}
+body{
+    width: 100%;
+    height: 100vh;
+    min-width: 1200px;
+    min-height: 950px;
+    background-color: #171C61;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+/*A 영역*/
+header{
+    float: left;
+}
+.hwrap{
+    float: left;
+    width: 200px;
+    height: calc(100vh - 100px);
+}
+.logo{
+    width: 180px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.navig{
+    float: left;
+    width: 200px;
+}
+.menu{
+    margin-left: 10px;
+    text-align: center;
+}
+.menu>li{
+    float: left;
+    width: 180px;
+    position: relative;
+}
+.menu>li>a{
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    background-color: orange;
+    color: #fff;
+    position: relative;
+}
+.menu>li>a:hover{
+    background-color: slateblue;
+}
+.submenu{
+    display: none;
+    position: absolute;   /*.submenu가 호버한 메인메뉴 옆에 높이별로 slidedown되게 하려면 absolute는 submenu에 주고 relative는 menu>li>a 한테 줌*/
+    top: 0;
+    left: 180px;
+    z-index: 1;   /*.submenu에 z-index 꼭 주기*/
+}
+.submenu>li{
+    left: 180px;
+    float: left;
+    width: 180px;
+}
+.submenu>li>a{
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(255, 255, 87);
+    color: #000;
+}
+.submenu>li>a:hover{
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+
+
+/*B 영역*/
+.slide{
+    float: right;
+    width: calc(100% - 600px);
+    height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
+}
+.slidelist{
+    width: 300%;   /*오 300% 맞네*/
+    height: calc(100vh - 100px);
+}
+.slidelist li{
+    float: left;
+    width: calc(100% / 3);   /*100% / 3*/
+    height: 100%;
+}
+.slidelist span{
+    float: left;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 400px;   /*span이 겹치지 않는 비결*/
+    margin-left: 450px;
+}
+.slidelist img{
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+/*C 영역*/
+.contents{
+    float: left;
+    width: 400px;
+    height: calc(100vh - 100px);
+    position: relative
+}
+.banner{
+    float: left;
+    width: 400px;
+    height: 100px;
+    background-color: #fff;
+}
+.banner span{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.banner img{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 160px;
+}
+.notice{
+    float: left;
+    width: 400px;
+    height: 450px;
+}
+.notice>a{
+    float: left;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    background-color: slateblue;
+    color: #fff;
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.notice>ul{
+    float: left;
+    width: 400px;
+    height: 410px;
+    background-color: slateblue;
+}
+.notice>ul>li{
+    width: 380px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.notice>ul>li>a{
+    color: #fff;
+}
+.notice>ul>li:hover{
+    font-weight: bold;
+}
+.notice span{
+    float: right;
+    color: #fff;
+}
+.gallery{
+    float: left;
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+}
+.gallery>a{
+    float: left;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    color: #fff;
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.gallery>ul{
+    float: left;
+    width: 400px;
+    height: 160px;
+    background-color: #333;
+}
+.gallery>ul>li{
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 5px 20px;
+}
+.gallery>ul>li:hover{
+    opacity: 0.5;
+}
+.gallery img{
+    width: 150px;
+    height: 150px;
+}
+.shortcut{
+    float: left;
+    width: 400px;
+    height: 100px;
+    background-color: #fff;
+}
+.shortcut li{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 5px 25px;
+}
+.shortcut li:hover{
+    opacity: 0.5;
+}
+
+#modal{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    display: none;
+}
+#modal.active{
+    display: block;
+}
+.modalup{
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+}
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px;
+}
+.body{
+    text-align: center;
+    padding-top: 30px;
+}
+button{
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}
+
+/*D 영역*/
+footer{
+    float: left;
+    width: 100%;
+    height: 100px;
+    background-color: slateblue;
+}
+.flogo{
+    float: left;
+    width: 200px;
+    height: 100px;
+    padding-left: 10px;
+}
+.copy{
+    float: left;
+    width: calc(100% - 500px);
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+.sns{
+    float: right;
+    width: 300px;
+    height: 100px;
+}
+.sns li{
+    float: left;
+    margin: 20px;
+}
+.sns li:hover{
+    opacity: 0.5;
+}
