@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+/*전체 영역*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333333;
+    list-style-type: none;
+}
+body{
+    width: 1000px;
+    height: 650px;
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+/*A 영역*/
+header{
+    float: left;
+    width: 200px;
+    height: 650px;
+}
+.hwrap{
+    float: left;
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.navig{
+    float: left;
+    width: 200px;
+    position: relative;
+}
+.menu{
+    padding-top: 20px;
+    padding-left: 10px;
+    text-align: center;
+}
+.menu>li{
+    float: left;
+    width: 180px;    
+}
+.menu>li>a{
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background-color: maroon;
+}
+.menu>li>a:hover{
+    background-color: green;
+}
+.submenu{
+    display: none;
+    float: left;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 190px;
+    width: 180px;
+    height: 250px;
+    background-color: lightgray;
+}
+.submenu>li>a{
+    color: green;
+    background-color: lightgray;
+    font-size: 14px;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+}
+.submenu>li>a:hover{
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+/*B + C 영역*/
+.bwrap{
+    float: right;
+    width: 800px;
+    height: 550px;
+}
+
+
+/*B 영역*/
+.slide{
+    float: left;
+    width: 800px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.slidelist{
+    width: 2400px;
+    height: 350px;
+}
+.slidelist li{
+    float: left;
+    width: 800px;
+    height: 350px;
+}
+.slidelist span{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.5);
+    width: 600px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 150px;
+    margin-left: 90px;
+}
+.slidelist img{
+    width: 800px;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+/*C 영역*/
+.contents{
+    float: left;
+    width: 800px;
+    height: 200px;
+}
+.tab{
+    float: left;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(255, 77, 77);
+    font-weight: bold;
+    margin-left: 10px;
+}
+.tab:hover{
+    background-color: lightgray;
+}
+.tab a{
+    color: #000;
+}
+.tbody{
+    float: left;
+    width: 300px;
+    height: 160px;
+    background-color: rgb(255, 77, 77);
+}
+.notice{
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+.notice ul{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.notice li{
+    line-height: 30px;
+}
+.notice li:hover{
+    font-weight: bold;
+}
+.notice ul a{
+    color: #fff;
+}
+.notice span{
+    float: right;
+    color: greenyellow;
+}
+.gallery{
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+.gallery ul{
+    margin-top: 35px;
+    margin-left: 20px;
+}
+.gallery ul a{
+    float: left;
+    margin-right: 15px;
+}
+.gallery li:hover{
+    opacity: 0.5;
+}
+.shortcut{
+    float: right;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.shortcut span{
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 1;
+}
+.shortcut span:hover{
+    opacity: 0.5;
+}
+.shortcut img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+/*D 영역*/
+footer{
+    float: right;
+    width: 800px;
+    height: 100px;
+    background-color: lightgray;
+}
+.fwrap{
+    float: left;
+    width: 800px;
+    height: 100px;
+}
+.flogo{
+    float: left;
+    width: 200px;
+    height: 40px;
+    margin-top:30px;
+}
+.fcontents{
+    float: right;
+    width: 600px;
+    height: 100px;
+}
+.fmenu{
+    float: left;
+    width: 600px;
+    height: 50px;
+}
+.fmenu ul{
+    float: left;
+    margin-left: 100px;
+}
+.fmenu li{
+    float: left;
+    line-height: 50px;
+    margin-right: 50px;
+}
+.copy{
+    float: left;
+    line-height: 50px;
+    margin-left: 60px;
+}
+/*모달 레이어 팝업*/
+#modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 3;
+    display: none;
+}
+#modal.active{
+    display: block;
+}
+.modalup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+}
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.body{
+    text-align: center;
+    line-height: 30px;
+}
+button{
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}

@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/*전체 영역*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "맑은 고딕";
+    color: #333333;
+}
+body{
+    min-width: 1200px;
+    min-height: 920px;
+    background-color: #FAEBD7; 
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+/*A 영역*/
+header{
+    float: left;
+}
+.hwrap{
+    float: left;
+    width: 200px;
+    height: 920px;
+    background-color: rgb(211, 233, 255);
+}
+.logo{
+    float: left;
+    width: 180px;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navig{
+    float: left;
+    width: 200px;
+    height: 720px;
+}
+.menu{
+    float: left;
+    width: 180px;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+.menu>li{
+    height: 50px;
+    line-height: 50px;
+    background-color: dodgerblue;
+}
+.menu>li>a{
+    color: #fff;
+    font-weight: bold;
+}
+.menu>li:hover{
+    background-color: gray;
+}
+.submenu{
+    position: absolute;
+    top: 0;
+    left: 180px;
+    z-index: 2;
+    width: 1000px;
+    height: 250px;
+    background-color: rgb(255, 204, 108);
+    color: #000;
+    font-size: 14px;
+    display: none;
+}
+.submenu>li{
+    float: left;
+    width: 180px;
+}
+.submenu>li>a{
+    height: 50px;
+    line-height: 50px;
+}
+.submenu>li:hover{
+    background-color:#fff;
+    font-weight: bold;
+}
+
+/*B+C 영역*/
+.bwrap{
+    float: right;
+    width: calc(100% - 200px);
+    height: 800px;
+}
+
+/*B 영역*/
+.slide{}
+
+
+/*C 영역*/
+.shortcut{}
+.contents{}
+.notice{}
+.gallery{}
+
+/*D 영역*/
+footer{}
+.fwrap{}
+.fmenu{}
+.copy{}
+.site{}
+
+
+/*레이어 팝업창*/

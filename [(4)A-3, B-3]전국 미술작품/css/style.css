@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/*전체 영역*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "맑은 고딕";
+    color: #333333;
+    list-style-type: none;
+}
+html, body{
+    min-width: 1200px;
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+/*A 영역*/
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(120, 82, 6, 0.5);
+}
+.hwrap{
+    width: 1200px;
+    height: 100px;
+    background-color: rgb(215, 183, 66);
+    position: relative;   /*.submenu는 .hwrap 기준으로 absolute & z-index*/ /*.submenu 한테 바로 relative 줘버리면 slideDown 시 slide 구역이 밀려남*/
+}
+.logo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    background-color: #ffffff61;
+}
+.navig{
+    float: right;
+    width: 820px;
+}
+.menu{
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+.menu>li{
+    float: left;
+    width: 200px;
+}
+.menu>li>a{
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(120, 82, 6);
+}
+.menu>li>a:hover{
+    background-color: orange;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+.submenu>li{
+    width: 200px;
+}
+.submenu>li>a{ 
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    background-color: rgb(242, 191, 87);
+}
+.submenu>li>a:hover{
+    font-weight: bold;
+    background-color: yellow;
+}
+
+
+
+/*B+C 영역*/
+.bwrap{
+    width: 1200px;
+    height: 500px;
+}
+
+/*B 영역*/
+.slide{
+    width: 1200px;
+    height: 300px;
+    position: relative;   /*.slidelist span 은 .slide기준으로 absolute & z-index*/
+    overflow: hidden;
+}
+.slidelist{
+    width: 1200px;
+    height: 900px;
+}
+.slidelist li{
+    width: 1200px;
+    height: 300px;
+}
+.slidelist span{
+    width: 800px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    margin-top: 130px;
+    margin-left: 180px;
+    position: absolute;
+    z-index: 1;
+}
+.slidelist img{
+    width: 1200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*C 영역*/
+.contents{
+    width: 1200px;
+    height: 200px;
+}
+.tabmenu{
+    float: left;
+    width: 400px;
+    height: 200px;
+    position: relative;   /*relative 는 조부모 .contents 보다 직계부모 .tabmenu, .banner, .shortcut 한테 주는게 낫다*/
+}
+.tabmenu>ul{
+    margin-top: 10px;
+}
+.tabmenu>ul>li{
+    float: left;
+    width: 90px;
+    color: #333333;
+}
+.tabmenu>ul>li>a{
+    background-color: lightgray;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.tabmenu>ul>li>a:hover{
+    font-weight: bold;
+    background-color: yellow;
+}
+.tabmenu>ul>li.active>a{
+    background-color: rgb(255, 255, 197);
+    font-weight: bold;
+}
+.tabmenu>ul>li>div{
+    position: absolute;
+    left: 0;   /*float: left 를 줘버리면 상자가 겹친채로 왼쪽에 붘는게 아니라, 상자가 가로로 나열됨*/
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.tabmenu>ul>li.active>div{
+    width: 400px;
+    height: 140px;
+    background-color: rgb(255, 255, 197);
+}
+.notice ul{
+    margin: 10px;
+}
+.notice li{
+    width: 380px;
+    line-height: 30px;
+}
+.notice li:hover{
+    font-weight: bold;
+}
+.notice span{
+    float: right;
+    color: orange;
+}
+.gallery li{
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.gallery li a{
+    width: 100px;
+    height: 100px;
+}
+.gallery li a:hover{
+    opacity: 0.5;
+}
+.banner{
+    float: left;
+    width: 400px;
+    height: 200px;
+    position: relative;
+}
+.banner a{
+    width: 400px;
+    height: 200px;
+}
+.banner span{
+    width: 360px;
+    height: 160px;
+    line-height: 160px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.banner span:hover{
+    opacity: 0.5;
+}
+.banner img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+.shortcut{
+    float: left;
+    width: 400px;
+    height: 200px;
+    position: relative;
+}
+.shortcut span{
+    text-align: center;
+    width: 360px;
+    height: 160px;
+    line-height: 160px;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-weight: bold;
+}
+.shortcut span:hover{
+    opacity: 0.5;
+}
+.shortcut img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+/*D 영역*/
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(120, 82, 6, 0.5);
+}
+.fwrap{
+    width: 1200px;
+    height: 100px;
+    background-color: rgb(120, 82, 6);
+}
+.flogo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    background-color: #ffffff42;
+}
+.copy{
+    float: left;
+    width: 700px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+
+}
+.sns{
+    float: right;
+    width: 250px;
+    height: 100px;
+}
+.sns li{
+    float: left;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.sns li:hover{
+    opacity: 0.5;
+}
+
+/*레이어팝업*/
+#layer{
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+#layer.active{
+    display: block;
+}
+.layerup{
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #000;
+}
+.body{
+    text-align: center;
+    color: #000;
+    line-height: 40px;
+}
+button{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}

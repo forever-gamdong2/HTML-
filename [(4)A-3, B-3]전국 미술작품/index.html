@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+<body>
+    
+    <!--A 영역-->
+    <header>
+        <div class="hwrap">
+            <div class="logo"><a href="#"><img src="./images/logo.png" alt="로고"></a></div>
+            <nav class="navig">
+                <ul class="menu">
+                    <li>
+                        <a href="#">소장처별</a>
+                        <ul class="submenu">
+                            <li><a href="#">서울/경기</a></li>
+                            <li><a href="#">강원</a></li>
+                            <li><a href="#">충청</a></li>
+                            <li><a href="#">경상/호남</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">장르별</a>
+                        <ul class="submenu">
+                            <li><a href="#">회화</a></li>
+                            <li><a href="#">판화</a></li>
+                            <li><a href="#">공예/고대유물</a></li>
+                            <li><a href="#">그 외</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">테마별</a>
+                        <ul class="submenu">
+                            <li><a href="#">초상화/인물</a></li>
+                            <li><a href="#">종교</a></li>
+                            <li><a href="#">신화/문학</a></li>
+                            <li><a href="#">일상/스포츠</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">시대별</a>
+                        <ul class="submenu">
+                            <li><a href="#">1900년이전</a></li>
+                            <li><a href="#">1900년대</a></li>
+                            <li><a href="#">현대</a></li>
+                            <li><a href="#">그 외</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--B+C 영역-->
+    <div class="bwrap">
+        <!--B 영역-->
+        <div class="slide">
+            <div class="slidelist">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>1900년대 미술작품</span>
+                            <img src="./images/img1.jpg" alt="슬라이드1">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>현대의 작가들</span>
+                            <img src="./images/img2.jpg" alt="슬라이드2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>전국 지역별 미술 전시</span>
+                            <img src="./images/img3.jpg" alt="슬라이드3">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--C 영역-->
+        <div class="contents">
+            <div class="tabmenu">
+                <ul>
+                    <li class="active">
+                        <a href="#">공지사항</a>
+                        <div class="notice">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        전국 미술작품 공지사항 1
+                                        <span>2022.03.01</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        전국 미술작품 공지사항 2
+                                        <span>2022.03.01</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        전국 미술작품 공지사항 3
+                                        <span>2022.03.01</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        전국 미술작품 공지사항 4
+                                        <span>2022.03.01</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">갤러리</a>
+                        <div class="gallery">
+                            <ul>
+                                <li><a href="#"><img src="./images/gallery1.jpg" alt="갤러리1"></a></li>
+                                <li><a href="#"><img src="./images/gallery2.jpg" alt="갤러리2"></a></li>
+                                <li><a href="#"><img src="./images/gallery3.jpg" alt="갤러리3"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="banner">
+                <a href="#">
+                    <span>배너</span>
+                    <img src="./images/banner.jpg" alt="배너">
+                </a>
+            </div>
+            <div class="shortcut">
+                <a href="#">
+                    <span>바로가기</span>
+                    <img src="./images/shortcut.jpg" alt="바로가기">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--D 영역-->
+    <footer>
+        <div class="fwrap">
+            <div class="flogo"><a href="#"><img src="./images/flogo.png" alt="하단로고"></a></div>
+            <div class="copy">COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</div>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="./images/sns1.jpg" alt="sns1"></a></li>
+                    <li><a href="#"><img src="./images/sns2.jpg" alt="sns2"></a></li>
+                    <li><a href="#"><img src="./images/sns3.jpg" alt="sns3"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--레이어 팝업-->
+    <div id="layer">
+        <div class="layerup">
+            <div class="title">미술작품 전시회 안내</div>
+            <div class="body">
+                미술작품 전시회에 초대합니다.<br>
+                전국 미술작품 협회의 주최로 '사랑 그리고 평화' 전시회가 열립니다.<br>
+                특별히 이번 전시회는 신인 작가들을 초대하여 전시를 개최함으로써<br>
+                작가의 작품세계를 조명함으로써<br>
+                현대미술의 의미를 확장하는 장이 될 것입니다.<br>
+            </div>
+            <button>X 닫기</button>
+        </div>
+    </div>
+
+</body>
+</html>
