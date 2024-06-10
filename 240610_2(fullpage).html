@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀페이지 연습</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css">
+
+    <style>
+        .section{
+            text-align: center;
+            font-size: 2em;
+            color: #fff;
+        }
+        span{
+            background-color: rgba(0,0,0,0.5);
+            padding: 50px 200px;
+        }
+        #sec1{
+            background-image: url('https://postfiles.pstatic.net/MjAyMjExMDFfMTA1/MDAxNjY3MzA0OTAzMTYw.XRKu3_rqeO3vM0DqjORii8PyRZ916Uj0UNwRm9imQFcg.JJzvkMK1X4l_myoAzs9mFbaUB9e5k2GHHvNHiWxTOBYg.JPEG.omytak/IMG_4906.JPG?type=w966');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #sec2{
+            background-image: url('https://postfiles.pstatic.net/MjAyMjExMDFfMTI2/MDAxNjY3MzA0OTAwODQ5.8zO38k5ldj3vBdIiAedsP_FtGi4cxyChjBa885-JGFIg.pSJWSh553fGzGLTXdSubvI2FaFuokilacoLgMd2NKXUg.JPEG.omytak/IMG_5305.JPG?type=w966');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #sec3{
+            background-image: url('https://postfiles.pstatic.net/MjAyMjExMDFfMTc5/MDAxNjY3MzA0OTAxNzUy.C-wra6V4q8BJpZlxNdOpBbcuDFi8ap0xXQzdKqrmR2Yg.T1k32s4hitwjQY10mmzfJENWHaE5jp61JnA4PLbXSfIg.JPEG.omytak/IMG_5726.JPG?type=w966');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #sec4{
+            background-image: url('https://postfiles.pstatic.net/MjAyMjExMDFfMTgy/MDAxNjY3MzA0ODk3MDY3.p4vFb4xkR-AlaqAOqcmqIB5e1g8vxQbZRrTD17OP5Z8g.j9We7Ry2Bn5mi5TWaPDdkSNLxgM2XG1oltwmHOlx0QEg.JPEG.omytak/IMG_5705.JPG?type=w966');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section" id="sec1"><span>Some section</span></div>
+        <div class="section" id="sec2"><span>Some section</span></div>
+        <div class="section" id="sec3"><span>Some section</span></div>
+        <div class="section" id="sec4"><span>Some section</span></div>
+    </div>
+
+    <script>
+        new fullpage('#fullpage', {
+	     //options here
+            autoScrolling:true,
+            navigation: true,
+            navigationPosition: 'right',
+            showActiveTooltip: true,
+            scrollSpeed: 1000,
+            afterRender: function(){
+                setInterval(function(){
+                    fullpage_api.moveSectionDown();
+                }, 3000);
+            }       
+        });
+    </script>
+</body>
+</html>
+
+
+<!--
+1. 기본 풀페이지 세팅
+2. 모든 요소를 갖다놓은 것
+3. 백그라운드 색상 추가하여 스크롤
+4. 각 섹션별 내비게이션
+5. 앵커 링크를 통해 각 섹션으로 이동
+6. 자동으로 스크롤 되는 에니메이션
+-->
